@@ -1,7 +1,10 @@
 import Flag from "./Flag";
 import Image from "next/image";
-export default function CaseCard({ title, image, body, url }) {
-  console.log({ image });
+import TextButton from "./TextButton";
+import { ChevronRight } from 'lucide-react';
+
+export default function CaseCard({ title, image, body, cta }) {
+console.log()
   return (
     
     <div className="rounded-2xl bg-white  shadow-xl  ">
@@ -12,18 +15,16 @@ export default function CaseCard({ title, image, body, url }) {
           </div>
           <div>
             <Image
-              alt=""
+              alt={title}
               src={image}
               width={500}
               height={500}
               className="aspect-[3/2] w-full rounded-2xl object-cover"
             />
           </div>
-          <div className="text-base/7 text-gray-600">{body}</div>
+          <div className=" text-lg  font-normal text-gray-600">{body}</div>
           <div>
-            <a href={url} className="text-indigo-600 hover:text-indigo-500">
-              Learn more →
-            </a>
+         <TextButton text={cta} variant="purple" url="#" />
           </div>
         </div>
       </div>

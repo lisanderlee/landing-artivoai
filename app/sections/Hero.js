@@ -1,7 +1,12 @@
+"use client";
+
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { useTranslations } from "next-intl";
 import Flag from "../components/Flag";
 import FlatButton from "../components/FlatButton";
 export default function Example() {
+  const t = useTranslations("hero_section");
+
   return (
     <div className="relative bg-gray-100 isolate ">
       <svg
@@ -33,30 +38,26 @@ export default function Example() {
           strokeWidth={0}
         />
       </svg>
-      <div className="mx-auto  max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-44">
+      <div className="mx-auto  max-w-[1300px] px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-44">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
           <div className="flex">
             <div className="">
-              <Flag
-                text="Primera Plataforma IA 100% en Español"
-                variant="black"
-              />
+              <Flag text={t("flag")} variant="black" />
             </div>
           </div>
-          <h1 className="mt-10 text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-            Crea{" "}
-            <span className=" text-violet-700">
-              imágenes y videos profesionales
-            </span>{" "}
-            en segundos
+
+          <h1 className="mt-10 text-pretty text-5xl  font-semibold tracking-loose text-gray-900 sm:text-7xl">
+            {t.rich("title", {
+              start: (chunks) => (
+                <span className=" text-violet-700">{chunks}</span>
+              ),
+            })}
           </h1>
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-            Olvídate de sesiones de fotos costosas y procesos largos. Genera,
-            edita y optimiza imágenes de productos con inteligencia artificial,
-            listas para e-commerce, redes sociales y publicidad.
+          <p className="mt-8 text-pretty text-lg font-light text-gray-700 sm:text-xl/8">
+            {t("subtitle")}
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <FlatButton text="Comienza a crear" variant="purple" url="#" />
+            <FlatButton text={t("cta")} variant="purple" url="#" />
           </div>
         </div>
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">

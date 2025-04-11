@@ -1,0 +1,274 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "use_cases": "Casos de Uso",
+    "workflows": "Flujos de Trabajo",
+    "pricing": "Precios",
+    "start_creating": "Comienza a Crear"
+  },
+  "hero_section": {
+    "flag": "Primera Plataforma IA 100% en Español",
+    "title": "Crea <start>imágenes y videos profesionales</start> en segundos",
+    "subtitle": "Olvídate de sesiones de fotos costosas y procesos largos. Genera, edita y optimiza imágenes de productos con inteligencia artificial, listas para e-commerce, redes sociales y publicidad.",
+    "cta": "Comienza a Crear"
+  },
+  "use_cases": {
+    "creatives_designers": {
+      "title": "Para Creativos y Diseñadores",
+      "description": "Explora nuevas ideas y crea variaciones de imágenes con IA en segundos.",
+      "image": "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/creativos-5G0kYJDmfnH79b1sqrusz4LhdWPeuQ.png",
+      "cta": "Mira el Caso de Uso"
+    },
+    "online_stores": {
+      "title": "Para Tiendas Online",
+      "description": "Mejora la conversión en tu tienda online con contenido visual optimizado.",
+      "image": "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/tienda-lqhzvl1LHvUyIt9dumYEGxhsoN4PUU.png",
+      "cta": "Mira el Caso de Uso"
+    },
+    "marketing_agencies": {
+      "title": "Para Agencias y Equipos de Marketing",
+      "description": "Ahorra tiempo y entrega contenido visual impactante más rápido.",
+      "image": "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/agencias-Q7Tut1K5MpzjDExLEI51Ns5KSqxqzy.png",
+      "cta": "Mira el Caso de Uso"
+    }
+  },
+  "tickers": {
+    "ticker_1": {
+      "title": "Cambia el fondo de tu producto y genera un video",
+      "images": [
+        "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
+    },
+    "ticker_2": {
+      "title": "Cambia el fondo de tus imágenes con modelos",
+      "images": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
+    },
+    "ticker_3": {
+      "title": "Pon tu producto en donde quieras, incluso modelos y genera un video",
+      "images": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
+    },
+    "ticker_4": {
+      "title": "Pon tu producto en las manos de un influencer virtual",
+      "images": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
+    },
+    "ticker_5": {
+      "title": "Ubica tu producto en cualquier tipo de escena",
+      "images": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
+    }
+  },
+  "workflows": {
+    "flag": "Explora nuestros workflows",
+    "title": "Workflows Especializados para Potenciar tu Flujo de Trabajo",
+    "description": "Escribe prompts, navega y accede a todas las herramientas en español, con soporte en tu idioma cuando lo necesites.",
+    "workflow": {
+      "product_transfer": {
+        "flag": "PRODUCTO EN USO",
+        "title": "Ubica tu producto en cualquier tipo de escena",
+        "description": "Mostrá tu producto en contexto sin necesidad de producción. Elegí fondo, estilo y listo.",
+        "alt_image": "Pon tu producto en donde quieras",
+        "images": [
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+        ]
+      },
+      "background_change": {
+        "flag": "FONDO DE PRODUCTO",
+        "title": "Fotografia de productos para tu e-commerce",
+        "description": "Reemplazá el fondo original por uno nuevo sin editar. Profesional, limpio y en un solo clic.",
+        "alt_image": "Cambia el fondo del producto",
+        "images": [
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png"
+        ]
+      },
+      "fashion_background": {
+        "flag": "MODELO EN ESCENA",
+        "title": "Cambia el fondo de tus imágenes con modelos",
+        "description": "Dale un nuevo estilo a tus fotos de moda. Elegí el fondo ideal sin hacer re-shoots.",
+        "alt_image": "Cambia el fondo de fotos de moda",
+        "images": [
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png"
+        ]
+      },
+      "image_to_video": {
+        "flag": "IMAGEN A VIDEO",
+        "title": "Convierte tus imágenes en videos con IA",
+        "description": "Transforma tus fotos en videos dinámicos en segundos. Genera contenido atractivo para e-commerce, redes sociales y anuncios sin necesidad de producción compleja.",
+        "alt_image": "Genera videos",
+        "images": [
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png"
+        ]
+      },
+      "text_to_image": {
+        "flag": "GENERADOR DE IMAGEN",
+        "title": "Genera la imagen perfecta con IA",
+        "alt_image": "Genera la imagen perfecta con IA",
+        "description": "Experimenta con estilos, fondos y composiciones ilimitadas para crear imágenes irresistibles y optimizadas para conversiones.",
+        "images": [
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png"
+        ]
+      }
+    },
+    "cta_primary": "Comienza a crear",
+    "cta_secondary": "Aprende mas sobre este workflow"
+  },
+  "price": {
+    "flag": "Planes Flexibles",
+    "headline": "Planes flexibles para todas tus necesidades",
+    "description": "Elige el plan que mejor se adapte a tu negocio y empieza a crear imágenes de alta calidad con IA. Sin costos ocultos, sin complicaciones.",
+    "free": {
+      "month": "Mes",
+      "year": "Año",
+      "tier": "Gratis",
+      "description": "Explora nuestras herramientas básicas de IA sin costo inicial.",
+      "features": {
+        "feature_1": "50 Creditos por mes",
+        "feature_2": "Generación de Images",
+        "feature_3": "Generación de Video 520p",
+        "feature_4": "Soporte por Email"
+      }
+    },
+    "base": {
+      "month": "Mes",
+      "year": "Año",
+      "tier": "Base",
+      "description": "Crea contenido visual con IA de forma simple y accesible.",
+      "features": {
+        "feature_1": "500 Creditos por mes",
+        "feature_2": "Generación de Images",
+        "feature_3": "Generación de Video 720p",
+        "feature_4": "Soporte por Email",
+        "feature_5": "Licencia Comercial"
+      }
+    },
+    "pro": {
+      "month": "Mes",
+      "year": "Año",
+      "tier": "Pro",
+      "description": "Genera imágenes y videos avanzados con mayor capacidad.",
+      "features": {
+        "feature_1": "3000 Creditos por mes",
+        "feature_2": "Generación de Images",
+        "feature_3": "Generación de Video HD",
+        "feature_4": "Acceso a Workflows",
+        "feature_5": "Descuento en Paquetes de Creditos",
+        "feature_6": "Soporte por Email",
+        "feature_7": "Webinarions Mensuales",
+        "feature_8": "Licencia Comercial"
+      }
+    },
+    "cta_primary": "Comienza a crear",
+    "more_info_question": "¿No estás seguro de qué plan te conviene más?",
+    "more_info_link": "Descubre todo lo que puedes hacer con Artivo según el plan que elijas",
+    "cta_callout": {
+      "flag": "Planes para compañías",
+      "headline": "¿Necesitas una Solución Personalizada para tu Negocio?",
+      "description": "Acceso API - Manager Dedicado - Prioridad de Procesamiento - Soporte Chat - Workflows a medida - Alto Volumen de Creditos",
+      "cta_text": "Lleva tu negocio al futuro.",
+      "cta_button": "Contáctanos"
+    }
+  },
+  "testimonial": {
+    "flag": "Que Opina Nuestros Usuarios",
+    "headline": "Únete a Nuestra Comunidad de Pioneros",
+    "description": "Sé de los primeros en acceder a nuestra plataforma, colaborar con nuestro equipo y ayudar a dar forma al futuro de Artivo. Tu retroalimentación influirá directamente en las nuevas funciones mientras mejoramos continuamente tu experiencia.",
+    "cta": "Comienza a crear",
+    "testimonials": {
+      "testimonial_1": {
+        "image": "",
+        "name": "Roberto Santos",
+        "position": "Fotógrafo de Producto",
+        "comment": "Artivo.Ai ha transformado mi flujo de trabajo. La generación de imágenes con IA y la facilidad de edición han revolucionado mi negocio."
+      },
+      "testimonial_2": {
+        "image": "",
+        "name": "Marina Lopez",
+        "position": "Dueña de Tienda Online",
+        "comment": "Gracias a Artivo.Ai, ahora puedo generar imágenes de producto profesionales sin depender de costosas sesiones de fotos. He ahorrado tiempo y dinero mientras mis ventas han aumentado. 🚀"
+      },
+      "testimonial_3": {
+        "image": "",
+        "name": "Natalia Denegri",
+        "position": "Diseñadora Gráfica",
+        "comment": "La posibilidad de probar fondos y escenarios en segundos sin necesidad de sesiones de fotos ha sido un cambio total para nuestro equipo."
+      },
+      "testimonial_4": {
+        "image": "",
+        "name": "Mario Martinez",
+        "position": "Dueño de Tienda Online",
+        "comment": "Las imágenes generadas han mejorado el engagement de mis productos y aumentado mis conversiones sin costos adicionales."
+      }
+    }
+  },
+  "faq": {
+    "what_is_artivo": {
+      "question": "¿Qué es Artivo.Ai y cómo funciona?",
+      "answer": "Artivo.Ai es una plataforma de inteligencia artificial diseñada para generar imágenes de producto de alta calidad en segundos. Permite cambiar fondos, probar diferentes escenarios y crear contenido visual atractivo sin necesidad de sesiones fotográficas."
+    },
+    "need_design_experience": {
+      "question": "¿Necesito experiencia en diseño para usar Artivo.Ai?",
+      "answer": "No. La plataforma es fácil de usar y no requiere conocimientos técnicos o de diseño. Solo necesitas subir una imagen o escribir un prompt y Artivo.Ai se encargará del resto."
+    },
+    "what_images_can_i_generate": {
+      "question": "¿Qué tipo de imágenes puedo generar?",
+      "answer": "Puedes crear imágenes para e-commerce, publicidad, redes sociales, branding y moda. La IA te permite ajustar fondos, estilos y escenarios según las necesidades de tu negocio."
+    },
+    "does_it_replace_photographers": {
+      "question": "¿Artivo.Ai reemplaza a los fotógrafos profesionales?",
+      "answer": "No reemplaza, pero sí optimiza el proceso de creación de imágenes. Puedes generar contenido de alta calidad en menos tiempo y a menor costo, reduciendo la dependencia de sesiones fotográficas costosas."
+    },
+    "commercial_use": {
+      "question": "¿Puedo usar las imágenes para fines comerciales?",
+      "answer": "Sí. Todas las imágenes generadas con Artivo.Ai pueden utilizarse para fines comerciales sin restricciones."
+    },
+    "advantages_vs_others": {
+      "question": "¿Qué ventajas tiene Artivo.Ai frente a otros editores de imágenes?",
+      "answer": "Artivo.Ai es una solución especializada en generación de imágenes con IA, permitiendo: ✅ Automatizar la creación de imágenes sin necesidad de edición manual. ✅ Optimizar contenido para diferentes plataformas sin esfuerzo. ✅ Generar variaciones en segundos, acelerando el proceso creativo."
+    },
+    "pricing": {
+      "question": "¿Cuánto cuesta Artivo.Ai?",
+      "answer": "Ofrecemos diferentes planes según el volumen de imágenes y las necesidades de cada negocio. Puedes consultar nuestra sección de precios o probar Artivo.Ai gratis antes de elegir un plan."
+    },
+    "advanced_services": {
+      "question": "¿Qué pasa si necesito un servicio más avanzado o procesar grandes volúmenes de imágenes?",
+      "answer": "Para empresas con alto volumen de procesamiento, ofrecemos servidores especializados y soluciones personalizadas. Contáctanos para diseñar un plan a medida."
+    },
+    "how_to_start": {
+      "question": "¿Cómo puedo empezar a usar Artivo.Ai?",
+      "answer": "Solo tienes que registrarte, subir una imagen o escribir un prompt, y en segundos obtendrás resultados optimizados."
+    },
+    "support": {
+      "question": "¿Dónde puedo obtener soporte si tengo dudas?",
+      "answer": "Contamos con atención en español a través de nuestro centro de ayuda. Puedes contactarnos en cualquier momento para resolver tus preguntas."
+    }
+  },
+  "footer": {
+    "description": "",
+    "legal": {
+      "privacy_policy": "Política de Privacidad",
+      "terms_of_service": "Términos de Servicio"
+    },
+    "copyright": "© 2025, Todos los Derechos Reservados por Future Supply LLC"
+  }
+}

@@ -1,0 +1,214 @@
+{
+
+    "navigation": {
+      "home": "Home",
+      "use_cases": "Use Cases",
+      "workflows": "Workflows",
+      "pricing": "Pricing",
+      "start_creating": "Start Creating"
+    },
+    "hero_section": {
+    "flag": "First 100% Spanish AI Platform",
+      "title": "Create professional images and videos in seconds",
+      "subtitle": "Forget expensive photoshoots and long processes. Generate, edit, and optimize product images with AI, ready for e-commerce, social media, and ads.",
+      "cta": "Start Creating"
+    },
+    "use_cases": {
+      "creatives_designers": {
+        "title": "For Creatives and Designers",
+        "description": "Explore new ideas and create image variations with AI in seconds.",
+        "image": "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/creativos-5G0kYJDmfnH79b1sqrusz4LhdWPeuQ.png",
+        "cta": "See Use Case"
+      },
+      "online_stores": {
+        "title": "For Online Stores",
+        "description": "Boost conversions in your store with optimized visual content.",
+        "image": "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/tienda-lqhzvl1LHvUyIt9dumYEGxhsoN4PUU.png",
+        "cta": "See Use Case"
+      },
+      "marketing_agencies": {
+        "title": "For Agencies and Marketing Teams",
+        "description": "Save time and deliver impactful visual content faster.",
+        "image": "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/agencias-Q7Tut1K5MpzjDExLEI51Ns5KSqxqzy.png",
+        "cta": "See Use Case"
+      }
+    },
+    "tickers": {
+      "ticker_1": {
+        "title": "Change your product background and generate a video",
+        "image_1": "",
+        "image_2": "",
+        "image_3": ""
+      },
+      "ticker_2": {
+        "title": "Change the background of your images with models",
+        "image_1": "",
+        "image_2": "",
+        "image_3": ""
+      },
+      "ticker_3": {
+        "title": "Place your product anywhere, even with models, and generate a video",
+        "image_1": "",
+        "image_2": "",
+        "image_3": ""
+      },
+      "ticker_4": {
+        "title": "Put your product in the hands of a virtual influencer",
+        "image_1": "",
+        "image_2": "",
+        "image_3": ""
+      },
+      "ticker_5": {
+        "title": "Place your product in any type of scene",
+        "image_1": "",
+        "image_2": "",
+        "image_3": ""
+      }
+    },
+    "workflows": {
+      "flag": "Explore our workflows",
+      "title": "Specialized Workflows to Boost Your Workflow",
+      "description": "Write prompts, navigate, and access all tools in English, with support in your language when needed.",
+      "workflow": {
+        "product_transfer": {
+          "flag": "PRODUCT IN USE",
+          "headline": "Place your product in any type of scene",
+          "body": "",
+          "image_1": "",
+          "image_2": "",
+          "image_3": "",
+          "image_4": ""
+        },
+        "background_change": {
+          "flag": "PRODUCT BACKGROUND",
+          "headline": "Product photography for your e-commerce",
+          "body": "Transform simple photos into eye-catching images with custom backgrounds in one click, optimized to capture attention on e-commerce.",
+          "image_1": "",
+          "image_2": "",
+          "image_3": "",
+          "image_4": ""
+        },
+        "fashion_background": {
+          "flag": "MODEL IN SCENE",
+          "headline": "Change the background of your images with models",
+          "body": "Create stunning fashion shoots and visualize your garments creatively without a production team.",
+          "image_1": "",
+          "image_2": "",
+          "image_3": "",
+          "image_4": ""
+        },
+        "image_to_video": {
+          "flag": "IMAGE TO VIDEO",
+          "headline": "Turn your images into videos with AI",
+          "body": "Transform your photos into dynamic videos in seconds. Generate attractive content for e-commerce, social media, and ads without complex production.",
+          "image_1": "",
+          "image_2": ""
+        },
+        "text_to_image": {
+          "flag": "IMAGE GENERATOR",
+          "headline": "Generate the perfect image with AI",
+          "body": "Experiment with unlimited styles, backgrounds, and compositions to create irresistible images optimized for conversions.",
+          "image_1": ""
+        }
+      },
+      "cta_primary": "Start Creating",
+      "cta_secondary": "Learn more about this workflow"
+    },
+    "price": {
+      "flag": "Flexible Plans",
+      "headline": "Flexible plans for all your needs",
+      "description": "Choose the plan that best suits your business and start creating high-quality AI images. No hidden costs, no hassle.",
+      "free": {
+        "month": "Month",
+        "year": "Year",
+        "tier": "Free",
+        "description": "Explore our basic AI tools at no initial cost.",
+        "features": {
+          "feature_1": "50 Credits per month",
+          "feature_2": "Image Generation",
+          "feature_3": "520p Video Generation",
+          "feature_4": "Email Support"
+        }
+      },
+      "base": {
+        "month": "Month",
+        "year": "Year",
+        "tier": "Base",
+        "description": "Create visual content with AI simply and affordably.",
+        "features": {
+          "feature_1": "500 Credits per month",
+          "feature_2": "Image Generation",
+          "feature_3": "720p Video Generation",
+          "feature_4": "Email Support",
+          "feature_5": "Commercial License"
+        }
+      },
+      "pro": {
+        "month": "Month",
+        "year": "Year",
+        "tier": "Pro",
+        "description": "Generate advanced images and videos with higher capacity.",
+        "features": {
+          "feature_1": "3000 Credits per month",
+          "feature_2": "Image Generation",
+          "feature_3": "HD Video Generation",
+          "feature_4": "Access to Workflows",
+          "feature_5": "Credit Package Discounts",
+          "feature_6": "Email Support",
+          "feature_7": "Monthly Webinars",
+          "feature_8": "Commercial License"
+        }
+      },
+      "cta_primary": "Start Creating",
+      "more_info_question": "Not sure which plan suits you best?",
+      "more_info_link": "Discover what you can do with Artivo based on your plan",
+      "cta_callout": {
+        "flag": "Plans for Companies",
+        "headline": "Need a Custom Solution for Your Business?",
+        "description": "API Access - Dedicated Manager - Priority Processing - Chat Support - Custom Workflows - High Credit Volume",
+        "cta_text": "Take your business to the future.",
+        "cta_button": "Contact Us"
+      }
+    },
+    "testimonial": {
+      "flag": "What Our Users Say",
+      "headline": "Join Our Community of Pioneers",
+      "description": "Be among the first to access our platform, collaborate with our team, and help shape the future of Artivo. Your feedback will directly influence new features as we continuously improve your experience.",
+      "cta": "Start Creating",
+      "testimonials": {
+        "testimonial_1": {
+          "image": "",
+          "name": "Roberto Santos",
+          "position": "Product Photographer",
+          "comment": "Artivo.Ai has transformed my workflow. AI image generation and easy editing have revolutionized my business."
+        },
+        "testimonial_2": {
+          "image": "",
+          "name": "Marina Lopez",
+          "position": "Online Store Owner",
+          "comment": "Thanks to Artivo.Ai, I can now generate professional product images without costly photoshoots. I’ve saved time and money while boosting sales. 🚀"
+        },
+        "testimonial_3": {
+          "image": "",
+          "name": "Natalia Denegri",
+          "position": "Graphic Designer",
+          "comment": "Being able to test backgrounds and scenes in seconds without photo sessions has been a total game changer for our team."
+        },
+        "testimonial_4": {
+          "image": "",
+          "name": "Mario Martinez",
+          "position": "Online Store Owner",
+          "comment": "The generated images have improved my product engagement and increased conversions without additional costs."
+        }
+      }
+    },
+    "footer": {
+      "description": "",
+      "legal": {
+        "privacy_policy": "Privacy Policy",
+        "terms_of_service": "Terms of Service"
+      },
+      "copyright": "© 2025, All Rights Reserved by Future Supply LLC"
+    }
+
+}

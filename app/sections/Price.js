@@ -1,5 +1,5 @@
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
-
+import CTA from '../components/CTA'
 const tiers = [
   {
     name: 'Basic',
@@ -85,6 +85,7 @@ export default function PriceSection() {
               </div>
             ))}
           </div>
+          <CTA />
         </div>
       </div>
     </div>

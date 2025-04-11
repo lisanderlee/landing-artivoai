@@ -45,7 +45,7 @@ export default function FlatButton({ text, variant = "purple", url }) {
         Object.assign(e.currentTarget.style, baseStyles);
       }}
     >
-      <p className="text-md font-medium">{text}</p>
+      <p className="text-md inline-block whitespace-nowrap  font-medium">{text}</p>
     </div>
   </a>
   );
