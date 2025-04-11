@@ -35,23 +35,38 @@
   "tickers": {
     "ticker_1": {
       "title": "Change your product background and generate a video",
-      "images": [...]
+      "images": [
+        "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
     },
     "ticker_2": {
       "title": "Change image backgrounds with models",
-      "images": [...]
+      "images": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
     },
     "ticker_3": {
       "title": "Place your product anywhere, even on models, and generate a video",
-      "images": [...]
+      "images": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
     },
     "ticker_4": {
       "title": "Put your product in the hands of a virtual influencer",
-      "images": [...]
+      "images": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
     },
     "ticker_5": {
       "title": "Place your product in any kind of scene",
-      "images": [...]
+      "images": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+      ]
     }
   },
   "workflows": {
@@ -64,35 +79,55 @@
         "title": "Place your product in any type of scene",
         "description": "Showcase your product in context without a shoot. Choose background, style, done.",
         "alt_image": "Place your product anywhere",
-        "images": [...]
+        "images": [
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+        ]
       },
       "background_change": {
         "flag": "PRODUCT BACKGROUND",
         "title": "Product photography for your e-commerce",
         "description": "Replace the original background with a new one — no editing. Clean and professional in one click.",
         "alt_image": "Change the product background",
-        "images": [...]
+        "images": [
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png"
+        ]
       },
       "fashion_background": {
         "flag": "MODEL IN SCENE",
         "title": "Change the background of your model photos",
         "description": "Give your fashion shots a new look. Choose the ideal background with no reshoots.",
         "alt_image": "Change fashion photo backgrounds",
-        "images": [...]
+        "images": [
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png"
+        ]
       },
       "image_to_video": {
         "flag": "IMAGE TO VIDEO",
         "title": "Turn your images into videos with AI",
         "description": "Transform your photos into dynamic videos in seconds. Create engaging content for e-commerce, social media, and ads — no complex production needed.",
         "alt_image": "Generate videos",
-        "images": [...]
+        "images": [
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png",
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png"
+        ]
       },
       "text_to_image": {
         "flag": "IMAGE GENERATOR",
         "title": "Generate the perfect image with AI",
         "alt_image": "Generate the perfect image with AI",
         "description": "Experiment with styles, backgrounds, and endless compositions to create irresistible images optimized for conversion.",
-        "images": [...]
+        "images": [
+          "https://teyvwpcti8fmipca.public.blob.vercel-storage.com/ComfyUI_temp_doaip_00015_-02NgwrJpAkee1t4Hs3OZQ3Y2oktSI4.png"
+        ]
       }
     },
     "cta_primary": "Start Creating",
