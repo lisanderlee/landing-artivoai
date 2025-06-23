@@ -7,7 +7,12 @@ const tiers = [
     href: '#',
     price: { monthly: '$19', annually: '$15' },
     description: 'Everything necessary to get started.',
-    features: ['5 products', 'Up to 1,000 subscribers', 'Basic analytics', '48-hour support response time'],
+    features: [
+      '5 products',
+      'Up to 1,000 subscribers',
+      'Basic analytics',
+      '48-hour support response time',
+    ],
   },
   {
     name: 'Essential',
@@ -46,13 +51,13 @@ export default function PriceSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl sm:text-center">
           <h2 className="text-base/7 font-semibold text-indigo-600">Pricing</h2>
-          <p className="mt-2 text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-balance sm:text-6xl">
+          <p className="mt-2 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-6xl sm:text-balance">
             Pricing that grows with you
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg font-medium text-gray-600 sm:text-center sm:text-xl/8">
-          Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer
-          loyalty, and driving sales.
+        <p className="mx-auto mt-6 max-w-2xl text-lg font-medium text-pretty text-gray-600 sm:text-center sm:text-xl/8">
+          Choose an affordable plan that’s packed with the best features for engaging your audience,
+          creating customer loyalty, and driving sales.
         </p>
         <div className="mt-20 flow-root">
           <div className="isolate -mt-16 grid max-w-sm grid-cols-1 gap-y-16 divide-y divide-gray-100 sm:mx-auto lg:-mx-8 lg:mt-0 lg:max-w-none lg:grid-cols-3 lg:divide-x lg:divide-y-0 xl:-mx-4">
@@ -62,10 +67,14 @@ export default function PriceSection() {
                   {tier.name}
                 </h3>
                 <p className="mt-6 flex items-baseline gap-x-1">
-                  <span className="text-5xl font-semibold tracking-tight text-gray-900">{tier.price.monthly}</span>
+                  <span className="text-5xl font-semibold tracking-tight text-gray-900">
+                    {tier.price.monthly}
+                  </span>
                   <span className="text-sm/6 font-semibold text-gray-600">/month</span>
                 </p>
-                <p className="mt-3 text-sm/6 text-gray-500">{tier.price.annually} per month if paid annually</p>
+                <p className="mt-3 text-sm/6 text-gray-500">
+                  {tier.price.annually} per month if paid annually
+                </p>
                 <a
                   href={tier.href}
                   aria-describedby={tier.id}
@@ -77,7 +86,10 @@ export default function PriceSection() {
                 <ul role="list" className="mt-6 space-y-3 text-sm/6 text-gray-600">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
-                      <CheckCircleIcon aria-hidden="true" className="h-6 w-5 flex-none text-indigo-600" />
+                      <CheckCircleIcon
+                        aria-hidden="true"
+                        className="h-6 w-5 flex-none text-indigo-600"
+                      />
                       {feature}
                     </li>
                   ))}

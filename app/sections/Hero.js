@@ -1,17 +1,17 @@
-"use client";
+'use client'
 
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
-import { useTranslations } from "next-intl";
-import Flag from "../components/Flag";
-import FlatButton from "../components/FlatButton";
+import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import { useTranslations } from 'next-intl'
+import Flag from '../components/Flag'
+import FlatButton from '../components/FlatButton'
 export default function Example() {
-  const t = useTranslations("hero_section");
+  const t = useTranslations('hero_section')
 
   return (
-    <div className="relative bg-gray-100 isolate ">
+    <div className="relative isolate bg-gray-100">
       <svg
         aria-hidden="true"
-        className="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        className="absolute inset-0 -z-10 size-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200"
       >
         <defs>
           <pattern
@@ -38,26 +38,24 @@ export default function Example() {
           strokeWidth={0}
         />
       </svg>
-      <div className="mx-auto  max-w-[1300px] px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-44">
+      <div className="mx-auto max-w-[1300px] px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-44">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
           <div className="flex">
             <div className="">
-              <Flag text={t("flag")} variant="black" />
+              <Flag text={t('flag')} variant="black" />
             </div>
           </div>
 
-          <h1 className="mt-10 text-pretty text-5xl  font-semibold tracking-loose text-gray-900 sm:text-7xl">
-            {t.rich("title", {
-              start: (chunks) => (
-                <span className=" text-violet-700">{chunks}</span>
-              ),
+          <h1 className="tracking-loose mt-10 text-5xl font-semibold text-pretty text-gray-900 sm:text-7xl">
+            {t.rich('title', {
+              start: (chunks) => <span className="text-violet-700">{chunks}</span>,
             })}
           </h1>
-          <p className="mt-8 text-pretty text-lg font-light text-gray-700 sm:text-xl/8">
-            {t("subtitle")}
+          <p className="mt-8 text-lg font-light text-pretty text-gray-700 sm:text-xl/8">
+            {t('subtitle')}
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <FlatButton text={t("cta")} variant="purple" url="#" />
+            <FlatButton text={t('cta')} variant="purple" url="#" />
           </div>
         </div>
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">
@@ -95,5 +93,5 @@ export default function Example() {
         </div>
       </div>
     </div>
-  );
+  )
 }

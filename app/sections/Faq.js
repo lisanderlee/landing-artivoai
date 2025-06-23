@@ -1,10 +1,10 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl'
 
 export default function Faq() {
-  const { t } = useTranslations();
-const faqs = Object.values(t('faq', { returnObjects: true }));
+  const { t } = useTranslations()
+  const faqs = Object.values(t('faq', { returnObjects: true }))
 
   return (
     <div className="bg-white">
@@ -20,8 +20,14 @@ const faqs = Object.values(t('faq', { returnObjects: true }));
                   <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
                     <span className="text-base/7 font-semibold">{faq.question}</span>
                     <span className="ml-6 flex h-7 items-center">
-                      <PlusSmallIcon aria-hidden="true" className="size-6 group-data-[open]:hidden" />
-                      <MinusSmallIcon aria-hidden="true" className="size-6 group-[&:not([data-open])]:hidden" />
+                      <PlusSmallIcon
+                        aria-hidden="true"
+                        className="size-6 group-data-[open]:hidden"
+                      />
+                      <MinusSmallIcon
+                        aria-hidden="true"
+                        className="size-6 group-[&:not([data-open])]:hidden"
+                      />
                     </span>
                   </DisclosureButton>
                 </dt>
