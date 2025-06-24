@@ -60,7 +60,7 @@ export default async function NavBar({ dict, lang }) {
     <header className="sticky top-0 z-10 w-full">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-[1780px] items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-[1780px] items-center justify-between p-6 lg:px-20"
       >
         <div className="flex lg:flex-1">
           <Link href={getLocalizedPath('/')} className="-m-1.5 p-1.5">
@@ -78,48 +78,38 @@ export default async function NavBar({ dict, lang }) {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
-              Casos de Uso
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[enter]:ease-out data-[leave]:duration-150 data-[leave]:ease-in"
-            >
-              <div className="p-4">
-                {products.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
-                  >
-                    <div className="flex-auto">
-                      <Link text={item.name} url={item.href} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon aria-hidden="true" className="size-5 flex-none text-gray-400" />
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </PopoverPanel>
-          </Popover>
-        </PopoverGroup>
+        <div className="hidden lg:flex lg:gap-x-6">
+          <Link
+            href={getLocalizedPath('/')}
+            className="text-xl leading-6.5 font-normal text-black hover:text-gray-700"
+          >
+            {dict.navigation.home}
+          </Link>
+          <Link
+            href={getLocalizedPath('/')}
+            className="text-xl leading-6.5 font-normal text-black hover:text-gray-700"
+          >
+            {dict.navigation.use_cases}
+          </Link>
+          <Link
+            href={getLocalizedPath('/')}
+            className="text-xl leading-6.5 font-normal text-black hover:text-gray-700"
+          >
+            {dict.navigation.tools}
+          </Link>
+          <Link
+            href={getLocalizedPath('/')}
+            className="text-xl leading-6.5 font-normal text-black hover:text-gray-700"
+          >
+            {dict.navigation.pricing}
+          </Link>
+        </div>
         <div className="hidden items-center gap-4 lg:flex lg:flex-1 lg:justify-end">
           <LanguageSwitcher currentLang={lang} dict={dict} />
           <div>
-            <FlatButton text="Comienza a crear" variant="purple" url="#" />
+            <button className="rounded-[50px] bg-[#351E3C] px-6 py-4 leading-6.5 font-semibold text-white">
+              {dict.buttons.start_creating}
+            </button>
           </div>
         </div>
       </nav>

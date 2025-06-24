@@ -16,8 +16,9 @@ export async function generateMetadata({ params }) {
   const dict = await getDictionary(lang)
 
   return {
-    title: dict.home.title,
-    description: dict.home.description,
+    title: `Artivo-${dict.meta.title}`,
+    description: dict.meta.description,
+    keywords: dict.meta.keywords,
     other: {
       'Content-Language': lang,
     },

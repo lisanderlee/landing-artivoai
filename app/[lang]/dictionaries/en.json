@@ -1,9 +1,16 @@
 {
+  "meta": {
+    "title": "AI Image and Video Generation Platform",
+    "description": "Create, edit, and optimize product images and videos with AI. Perfect for e-commerce, social media, and advertising.",
+    "keywords": "AI, image generation, video generation, e-commerce, social media, advertising, product images, product videos, AI tools, AI platform, image editing, video editing, background removal, virtual influencers, product placement"
+  },
   "navigation": {
     "home": "Home",
     "use_cases": "Use Cases",
-    "workflows": "Workflows",
-    "pricing": "Pricing",
+    "tools": "Workflows",
+    "pricing": "Pricing"
+  },
+  "buttons": {
     "start_creating": "Start Creating"
   },
   "language": {

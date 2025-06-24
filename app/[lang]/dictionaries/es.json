@@ -1,9 +1,16 @@
 {
+  "meta": {
+    "title": "Genera imágenes y videos con IA en español",
+    "description": "Crea imágenes y videos profesionales en segundos con la primera plataforma de IA 100% en español. Genera, edita y optimiza contenido visual para e-commerce, redes sociales y publicidad.",
+    "keywords": "IA, generación de imágenes, generación de videos, e-commerce, redes sociales, publicidad, imágenes de productos, videos de productos, herramientas de IA, plataforma de IA, edición de imágenes, edición de videos, eliminación de fondos, influencers virtuales, colocación de productos"
+  },
   "navigation": {
     "home": "Inicio",
     "use_cases": "Casos de Uso",
-    "workflows": "Flujos de Trabajo",
-    "pricing": "Precios",
+    "tools": "Herramientas",
+    "pricing": "Precios"
+  },
+  "buttons": {
     "start_creating": "Comienza a Crear"
   },
   "language": {
