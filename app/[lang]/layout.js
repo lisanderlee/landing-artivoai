@@ -1,12 +1,15 @@
 import { Outfit } from 'next/font/google'
-import '../globals.css'
+import './globals.css'
 import { getDictionary } from './dictionaries'
 
 const outfit = Outfit({
   subsets: ['latin'],
-
   display: 'swap',
 })
+
+export async function generateStaticParams() {
+  return [{ lang: 'es' }, { lang: 'en' }]
+}
 
 export async function generateMetadata({ params }) {
   const { lang } = await params
@@ -23,10 +26,9 @@ export async function generateMetadata({ params }) {
 
 export default async function RootLayout({ children, params }) {
   const { lang } = await params
-  const dict = await getDictionary(lang)
-
+  console.log('Current Language:', lang)
   return (
-    <html lang={dict}>
+    <html lang={lang}>
       <body className={`${outfit.className} antialiased`}>
         <main>{children}</main>
       </body>

@@ -18,5 +18,4 @@ const nextConfig = {
   },
 }
 
-// Export wrapped configp
 export default nextConfig

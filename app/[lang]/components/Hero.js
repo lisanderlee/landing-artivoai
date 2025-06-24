@@ -2,8 +2,8 @@
 
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { useTranslations } from 'next-intl'
-import Flag from '../[lang]/components/Flag'
-import FlatButton from '../[lang]/components/FlatButton'
+import Flag from './Flag'
+import FlatButton from './FlatButton'
 
 export default function Example() {
   const t = useTranslations('home')

@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
-import LanguageSwitcher from './LenguageSwitcher'
+import LanguageSwitcher from './language-switcher'
 
 const products = [
   {
@@ -116,10 +116,8 @@ export default async function NavBar({ dict, lang }) {
             </PopoverPanel>
           </Popover>
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <div className="flex w-14 items-center pr-5">
-            <LanguageSwitcher currentLang={lang} dict={dict} />
-          </div>
+        <div className="hidden items-center gap-4 lg:flex lg:flex-1 lg:justify-end">
+          <LanguageSwitcher currentLang={lang} dict={dict} />
           <div>
             <FlatButton text="Comienza a crear" variant="purple" url="#" />
           </div>

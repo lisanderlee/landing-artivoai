@@ -4,19 +4,27 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 import { useRouter, usePathname } from 'next/navigation'
-import { Fragment } from 'react'
 
 export default function LanguageSwitcher({ currentLang, dict }) {
   const router = useRouter()
   const pathname = usePathname()
+
   const switchLanguage = (newLang) => {
+    if (newLang === currentLang) return
     // Remove current language from pathname
+    console.log('Switching language to:', newLang)
     const pathWithoutLang = pathname.replace(/^\/[a-z]{2}/, '') || '/'
 
+    console.log('Path without language prefix:', pathWithoutLang)
     // For Spanish (default), don't add prefix
     if (newLang === 'es') {
+      console.log(
+        'Switching to Spanish, navigating to:',
+        pathWithoutLang === '/' ? '/' : pathWithoutLang,
+      )
       router.push(pathWithoutLang === '/' ? '/' : pathWithoutLang)
     } else {
+      console.log('Switching to another language, navigating to:', `/${newLang}${pathWithoutLang}`)
       // For other languages, add prefix
       router.push(`/${newLang}${pathWithoutLang}`)
     }
@@ -32,8 +40,9 @@ export default function LanguageSwitcher({ currentLang, dict }) {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <MenuButton className="inline-flex w-10 justify-center gap-x-1.5 rounded-md text-sm font-semibold text-gray-900 ring-gray-300 hover:bg-gray-50">
-          {currentLanguage.name}
+        <MenuButton className="inline-flex cursor-pointer justify-center gap-x-1.5 rounded-md px-2 py-1 text-sm font-semibold text-gray-900 ring-gray-300 hover:bg-gray-50">
+          <span className="hidden sm:inline">{currentLanguage?.flag}</span>
+          <span className="hidden md:inline">{currentLanguage?.name}</span>
           <ChevronDownIcon aria-hidden="true" className="-mr-1 size-5 text-gray-400" />
         </MenuButton>
       </div>

@@ -1,12 +1,14 @@
-import { useTranslations } from 'next-intl'
 import NavBar from './components/navbar'
-
-import Footer from '../sections/Footer'
 import { getDictionary } from './dictionaries'
 
 export default async function Home({ params }) {
   const { lang } = await params
   const dict = await getDictionary(lang)
+
+  const getLocalizedPath = (path) => {
+    return lang === 'es' ? path : `/${lang}${path}`
+  }
+
   return (
     <div className="bg-[url('/images/background.png')] bg-cover bg-center bg-no-repeat">
       <NavBar dict={dict} lang={lang} />
@@ -17,7 +19,7 @@ export default async function Home({ params }) {
       <PriceSection />
       <Testimonials /> */}
       {/* <Faq /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

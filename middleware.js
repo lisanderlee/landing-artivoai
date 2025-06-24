@@ -50,9 +50,8 @@ export function middleware(request) {
   const locale = getLocale(request)
 
   // For default locale (Spanish), don't add prefix
-  if (locale === defaultLocale) {
-    request.nextUrl.pathname = `/es${pathname}`
-    return NextResponse.rewrite(request.nextUrl)
+  if (pathname === '/' && locale === defaultLocale) {
+    return
   }
 
   // For other locales, redirect with prefix

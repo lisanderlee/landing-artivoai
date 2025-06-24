@@ -1,4 +1,4 @@
-import CaseCard from '../[lang]/components/CaseCard'
+import CaseCard from './CaseCard'
 import creativos_image from '@/public/images/creativos.png'
 import agencias_image from '@/public/images/agencias.png'
 import tienda_image from '@/public/images/tienda.png'

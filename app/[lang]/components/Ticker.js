@@ -1,5 +1,5 @@
 import Marquee from 'react-fast-marquee'
-import TickerCard from '../[lang]/components/TickerCard'
+import TickerCard from './TickerCard'
 import { useTranslations } from 'next-intl'
 
 export default function Ticker() {
