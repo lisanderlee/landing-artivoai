@@ -1,19 +1,6 @@
-'use client'
 import Image from 'next/image'
-import LanguageSwitcher from '../[lang]/components/LenguageSwitcher'
-import FlatButton from '../[lang]/components/FlatButton'
-import { useState } from 'react'
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-} from '@headlessui/react'
+import FlatButton from './FlatButton'
+import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/react'
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -21,10 +8,11 @@ import {
   CursorArrowRaysIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
-  XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import LanguageSwitcher from './LenguageSwitcher'
+
 const products = [
   {
     name: 'Dueños de Tiendas Online',
@@ -62,8 +50,11 @@ const callsToAction = [
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ]
 
-export default function NavBar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+export default async function NavBar({ dict, lang }) {
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const getLocalizedPath = (path) => {
+    return lang === 'es' ? path : `/${lang}${path}`
+  }
 
   return (
     <header className="sticky top-0 z-10 w-full">
@@ -72,15 +63,15 @@ export default function NavBar() {
         className="mx-auto flex max-w-[1780px] items-center justify-between p-6 lg:px-8"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href={getLocalizedPath('/')} className="-m-1.5 p-1.5">
             <span className="sr-only">Artivo Ai</span>
             <Image width={117} height={32} alt="" src="/images/logo.svg" className="w-auto" />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            onClick={() => setMobileMenuOpen(true)}
+            // onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
             <span className="sr-only">Open main menu</span>
@@ -127,14 +118,14 @@ export default function NavBar() {
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <div className="flex w-14 items-center pr-5">
-            <LanguageSwitcher />
+            <LanguageSwitcher currentLang={lang} dict={dict} />
           </div>
           <div>
             <FlatButton text="Comienza a crear" variant="purple" url="#" />
           </div>
         </div>
       </nav>
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+      {/* <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -205,7 +196,7 @@ export default function NavBar() {
             </div>
           </div>
         </DialogPanel>
-      </Dialog>
+      </Dialog> */}
     </header>
   )
 }

@@ -2,10 +2,11 @@
 
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { useTranslations } from 'next-intl'
-import Flag from '../components/Flag'
-import FlatButton from '../components/FlatButton'
+import Flag from '../[lang]/components/Flag'
+import FlatButton from '../[lang]/components/FlatButton'
+
 export default function Example() {
-  const t = useTranslations('hero_section')
+  const t = useTranslations('home')
 
   return (
     <div className="relative isolate bg-gray-100">
@@ -52,7 +53,7 @@ export default function Example() {
             })}
           </h1>
           <p className="mt-8 text-lg font-light text-pretty text-gray-700 sm:text-xl/8">
-            {t('subtitle')}
+            {t('description')}
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <FlatButton text={t('cta')} variant="purple" url="#" />

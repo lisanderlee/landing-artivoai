@@ -6,10 +6,15 @@
     "pricing": "Precios",
     "start_creating": "Comienza a Crear"
   },
-  "hero_section": {
+  "language": {
+    "switch": "Cambiar idioma",
+    "spanish": "Español",
+    "english": "Inglés"
+  },
+  "home": {
     "flag": "Primera Plataforma IA 100% en Español",
     "title": "Crea <start>imágenes y videos profesionales</start> en segundos",
-    "subtitle": "Olvídate de sesiones de fotos costosas y procesos largos. Genera, edita y optimiza imágenes de productos con inteligencia artificial, listas para e-commerce, redes sociales y publicidad.",
+    "description": "Olvídate de sesiones de fotos costosas y procesos largos. Genera, edita y optimiza imágenes de productos con inteligencia artificial, listas para e-commerce, redes sociales y publicidad.",
     "cta": "Comienza a Crear"
   },
   "use_cases": {

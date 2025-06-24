@@ -1,5 +1,5 @@
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
-import CTA from '../components/CTA'
+import CTA from '../[lang]/components/CTA'
 const tiers = [
   {
     name: 'Basic',

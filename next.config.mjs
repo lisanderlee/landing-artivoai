@@ -1,13 +1,4 @@
 /** @type {import('next').NextConfig} */
-import createNextIntlPlugin from 'next-intl/plugin'
-
-// Extend Next.js with next-intl plugin
-const withNextIntl = createNextIntlPlugin({
-  // Optional: Generate TypeScript declarations for message keys (safe to ignore for JS)
-  experimental: {
-    createMessagesDeclaration: './messages/en.json',
-  },
-})
 
 // Your base Next.js configuration
 const nextConfig = {
@@ -28,4 +19,4 @@ const nextConfig = {
 }
 
 // Export wrapped configp
-export default withNextIntl(nextConfig)
+export default nextConfig

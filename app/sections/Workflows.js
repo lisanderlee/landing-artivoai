@@ -1,5 +1,5 @@
-import WorkflowCard from '../components/WorflowCard'
-import TitleSection from '../components/TitleSectionContent'
+import WorkflowCard from '../[lang]/components/WorflowCard'
+import TitleSection from '../[lang]/components/TitleSectionContent'
 import { ArrowDownRight, Image, Clapperboard, SquareUser } from 'lucide-react'
 
 import { useTranslations } from 'next-intl'
