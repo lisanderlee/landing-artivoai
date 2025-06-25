@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import FlatButton from './FlatButton'
-import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/react'
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -9,7 +7,6 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 import LanguageSwitcher from './language-switcher'
 
@@ -45,10 +42,6 @@ const products = [
     icon: ArrowPathIcon,
   },
 ]
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
 
 export default async function NavBar({ dict, lang }) {
   // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -58,10 +51,7 @@ export default async function NavBar({ dict, lang }) {
 
   return (
     <header className="sticky top-0 z-10 w-full">
-      <nav
-        aria-label="Global"
-        className="mx-auto flex max-w-[1780px] items-center justify-between p-6 lg:px-20"
-      >
+      <nav aria-label="Global" className="mx-auto flex max-w-[1730px] items-center justify-between">
         <div className="flex lg:flex-1">
           <Link href={getLocalizedPath('/')} className="-m-1.5 p-1.5">
             <span className="sr-only">Artivo Ai</span>
@@ -106,11 +96,9 @@ export default async function NavBar({ dict, lang }) {
         </div>
         <div className="hidden items-center gap-4 lg:flex lg:flex-1 lg:justify-end">
           <LanguageSwitcher currentLang={lang} dict={dict} />
-          <div>
-            <button className="rounded-[50px] bg-[#351E3C] px-6 py-4 leading-6.5 font-semibold text-white">
-              {dict.buttons.start_creating}
-            </button>
-          </div>
+          <button className="cursor-pointer rounded-[50px] bg-[#351E3C] px-6 py-4 leading-6.5 font-semibold text-white transition-colors hover:bg-gray-900 hover:shadow-md">
+            {dict.buttons.start_creating}
+          </button>
         </div>
       </nav>
       {/* <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">

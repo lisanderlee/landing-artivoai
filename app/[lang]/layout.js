@@ -1,5 +1,5 @@
 import { Outfit } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 import { getDictionary } from './dictionaries'
 
 const outfit = Outfit({

@@ -20,9 +20,24 @@
   },
   "home": {
     "flag": "Primera Plataforma IA 100% en Español",
-    "title": "Crea imágenes y videos profesionales en segundos",
+    "title": {
+      "pre": "Crea ",
+      "highlight": "imágenes y videos ",
+      "post": "profesionales en segundos"
+    },
     "description": "Olvídate de sesiones de fotos costosas y procesos largos. Genera, edita y optimiza imágenes de productos con inteligencia artificial, listas para e-commerce, redes sociales y publicidad.",
-    "cta": "Comienza a Crear"
+    "image_alts": {
+      "image_lg": "Fondo simulado con producto",
+      "image_sm": "producto"
+    },
+    "tools": {
+      "image": "Generar Imagen",
+      "video": "Generar Video",
+      "background": "Cambio de Fondo",
+      "product": "Transferencia de Producto",
+      "upscale": "Mejorar Resolución",
+      "resize": "Redimensionar Imagen"
+    }
   },
   "use_cases": {
     "creatives_designers": {
