@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import {
   ArrowPathIcon,
@@ -9,6 +11,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import LanguageSwitcher from './language-switcher'
+import { useState } from 'react'
 
 const products = [
   {
@@ -43,14 +46,15 @@ const products = [
   },
 ]
 
-export default async function NavBar({ dict, lang }) {
-  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+export default function NavBar({ dict, lang }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false)
   const getLocalizedPath = (path) => {
     return lang === 'es' ? path : `/${lang}${path}`
   }
 
   return (
-    <header className="sticky top-0 z-10 w-full">
+    <header className="sticky top-0 z-10 w-full py-6">
       <nav aria-label="Global" className="mx-auto flex max-w-[1730px] items-center justify-between">
         <div className="flex lg:flex-1">
           <Link href={getLocalizedPath('/')} className="-m-1.5 p-1.5">
