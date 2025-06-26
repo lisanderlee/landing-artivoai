@@ -3,6 +3,7 @@ import { getDictionary } from './dictionaries'
 import { HeroSection } from './components/hero-section'
 import { InputSection } from './components/input-section'
 import { Cards } from './components/cards'
+import { UseCases } from './components/use-cases'
 
 export default async function Home({ params }) {
   const { lang } = await params
@@ -32,6 +33,7 @@ export default async function Home({ params }) {
       </div>
       <InputSection dict={dict} lang={lang} />
       <Cards dict={dict} />
+      <UseCases dict={dict} />
     </>
   )
 }
