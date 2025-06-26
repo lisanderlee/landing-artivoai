@@ -31,7 +31,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={lang}>
       <body className={`${outfit.className} antialiased`}>
-        <main>{children}</main>
+        <main className="relative">{children}</main>
       </body>
     </html>
   )

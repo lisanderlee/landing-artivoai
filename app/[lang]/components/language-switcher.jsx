@@ -12,19 +12,12 @@ export default function LanguageSwitcher({ currentLang, dict }) {
   const switchLanguage = (newLang) => {
     if (newLang === currentLang) return
     // Remove current language from pathname
-    console.log('Switching language to:', newLang)
     const pathWithoutLang = pathname.replace(/^\/[a-z]{2}/, '') || '/'
 
-    console.log('Path without language prefix:', pathWithoutLang)
     // For Spanish (default), don't add prefix
     if (newLang === 'es') {
-      console.log(
-        'Switching to Spanish, navigating to:',
-        pathWithoutLang === '/' ? '/' : pathWithoutLang,
-      )
-      router.push(pathWithoutLang === '/' ? '/' : pathWithoutLang)
+      router.push(pathWithoutLang === '/' ? '/es' : pathWithoutLang)
     } else {
-      console.log('Switching to another language, navigating to:', `/${newLang}${pathWithoutLang}`)
       // For other languages, add prefix
       router.push(`/${newLang}${pathWithoutLang}`)
     }
