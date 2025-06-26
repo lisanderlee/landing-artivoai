@@ -4,6 +4,7 @@ import { HeroSection } from './components/hero-section'
 import { InputSection } from './components/input-section'
 import { Cards } from './components/cards'
 import { UseCases } from './components/use-cases'
+import { Advertisement } from './components/advertisement'
 
 export default async function Home({ params }) {
   const { lang } = await params
@@ -34,6 +35,7 @@ export default async function Home({ params }) {
       <InputSection dict={dict} lang={lang} />
       <Cards dict={dict} />
       <UseCases dict={dict} />
+      <Advertisement dict={dict} />
     </>
   )
 }

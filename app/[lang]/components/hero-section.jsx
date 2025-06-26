@@ -38,7 +38,7 @@ export const HeroSection = ({ dict }) => {
         <div className="flex flex-col items-center justify-center gap-4">
           <Tooltip>
             <TooltipTrigger asChild>
-              <button className="cursor-pointer rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
+              <button className="rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
                 <ImageIcon className="h-4 w-4" />
               </button>
             </TooltipTrigger>
@@ -48,7 +48,7 @@ export const HeroSection = ({ dict }) => {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <button className="cursor-pointer rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
+              <button className="rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
                 <Film className="h-4 w-4" />
               </button>
             </TooltipTrigger>
@@ -58,7 +58,7 @@ export const HeroSection = ({ dict }) => {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <button className="cursor-pointer rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
+              <button className="rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
                 <Focus className="h-4 w-4" />
               </button>
             </TooltipTrigger>
@@ -68,7 +68,7 @@ export const HeroSection = ({ dict }) => {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <button className="cursor-pointer rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
+              <button className="rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
                 <Replace className="h-4 w-4" />
               </button>
             </TooltipTrigger>
@@ -78,7 +78,7 @@ export const HeroSection = ({ dict }) => {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <button className="cursor-pointer rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
+              <button className="rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
                 <Grip className="h-4 w-4" />
               </button>
             </TooltipTrigger>
@@ -88,7 +88,7 @@ export const HeroSection = ({ dict }) => {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <button className="cursor-pointer rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
+              <button className="rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
                 <Ratio className="h-4 w-4" />
               </button>
             </TooltipTrigger>

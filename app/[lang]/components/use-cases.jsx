@@ -21,7 +21,7 @@ export const UseCases = ({ dict }) => {
               <div className="absolute top-0 left-6 h-12 w-12 rounded-full bg-white" />
               <div className="absolute top-1/2 -right-6.5 h-13 w-13 -translate-y-1/2 transform rounded-full bg-white" />
               <div className="absolute bottom-0 left-7 h-14 w-14 rounded-full bg-white" />
-              <div className="flex h-24.5 w-24.5 items-center justify-center rounded-full bg-[#27272A]">
+              <div className="flex h-24.5 w-24.5 items-center justify-center rounded-full bg-zinc-800">
                 <Image
                   src="/images/logo-icon.svg"
                   width={100}
@@ -56,9 +56,9 @@ export const UseCases = ({ dict }) => {
             <path
               d="M159.4 30.6L187 3M3 187L30.6 159.4M53.6 108.8L76.6 85.8M81.2 136.4L104.2 113.4M42.5603 171.36C44.6116 173.418 47.0491 175.052 49.7329 176.166C52.4168 177.281 55.2943 177.854 58.2003 177.854C61.1063 177.854 63.9838 177.281 66.6677 176.166C69.3515 175.052 71.789 173.418 73.8403 171.36L95.0003 150.2L39.8003 95L18.6403 116.16C16.5819 118.211 14.9486 120.649 13.8342 123.333C12.7198 126.017 12.1461 128.894 12.1461 131.8C12.1461 134.706 12.7198 137.583 13.8342 140.267C14.9486 142.951 16.5819 145.389 18.6403 147.44L42.5603 171.36ZM95 39.8003L150.2 95.0003L171.36 73.8403C173.418 71.789 175.052 69.3515 176.166 66.6677C177.281 63.9838 177.854 61.1063 177.854 58.2003C177.854 55.2943 177.281 52.4168 176.166 49.7329C175.052 47.0491 173.418 44.6116 171.36 42.5603L147.44 18.6403C145.389 16.5819 142.951 14.9486 140.267 13.8342C137.583 12.7198 134.706 12.1461 131.8 12.1461C128.894 12.1461 126.017 12.7198 123.333 13.8342C120.649 14.9486 118.211 16.5819 116.16 18.6403L95 39.8003Z"
               stroke="#09090B"
-              stroke-width="5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </div>
@@ -82,24 +82,24 @@ export const UseCases = ({ dict }) => {
         <div className="relative col-span-2 flex translate-y-20 flex-col items-center justify-center gap-4">
           <div className="flex w-full items-center gap-4">
             <div className="h-25 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#27272A]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
               <BotMessageSquare className="h-6 w-6 text-zinc-50" />
             </div>
           </div>
           <div className="flex w-full items-center gap-4">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#27272A]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
               <BotMessageSquare className="h-6 w-6 text-zinc-50" />
             </div>
             <div className="h-17 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />
           </div>
           <div className="flex w-full items-center gap-4">
             <div className="h-25 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#27272A]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
               <BotMessageSquare className="h-6 w-6 text-zinc-50" />
             </div>
           </div>
           <div className="flex w-full items-center gap-4">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#27272A]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
               <BotMessageSquare className="h-6 w-6 text-zinc-50" />
             </div>
             <div className="h-17 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />

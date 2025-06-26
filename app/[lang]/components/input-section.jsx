@@ -1,5 +1,4 @@
-import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip'
-import { BotMessageSquare, Candy, Image, ImagePlusIcon, WandSparkles } from 'lucide-react'
+import { BotMessageSquare, Candy, ImagePlusIcon, WandSparkles } from 'lucide-react'
 
 export const InputSection = ({ dict }) => {
   return (
@@ -25,23 +24,23 @@ export const InputSection = ({ dict }) => {
               <div className="font-outfit col-span-3 row-span-1 flex items-center gap-2 font-medium capitalize">
                 <div className="flex w-2/3 flex-wrap gap-1 lg:w-full lg:gap-2">
                   {/* Size Dropdown */}
-                  <button className="flex h-[21px] min-h-0 cursor-pointer items-center justify-center gap-0.5 rounded-2xl border border-transparent bg-[#EBEBEB] px-2.5 py-[3px] text-[11px] leading-0 text-[#414141] hover:border-zinc-300">
+                  <button className="flex h-[21px] min-h-0 items-center justify-center gap-0.5 rounded-2xl border border-transparent bg-[#EBEBEB] px-2.5 py-[3px] text-[11px] leading-0 text-[#414141] hover:border-zinc-300">
                     Size
                   </button>
 
                   {/* Quality Dropdown */}
-                  <button className="h-[21px] min-h-0 cursor-pointer gap-0.5 rounded-2xl border border-transparent bg-[#EBEBEB] px-2.5 py-[3px] text-[11px] leading-0 text-[#414141] hover:border-zinc-300">
+                  <button className="h-[21px] min-h-0 gap-0.5 rounded-2xl border border-transparent bg-[#EBEBEB] px-2.5 py-[3px] text-[11px] leading-0 text-[#414141] hover:border-zinc-300">
                     Quality
                   </button>
 
                   {/* Length Dropdown */}
 
-                  <button className="h-[21px] min-h-0 cursor-pointer gap-0.5 rounded-2xl border border-transparent bg-[#EBEBEB] px-2.5 py-[3px] text-[11px] leading-0 text-[#414141] hover:border-zinc-300">
+                  <button className="h-[21px] min-h-0 gap-0.5 rounded-2xl border border-transparent bg-[#EBEBEB] px-2.5 py-[3px] text-[11px] leading-0 text-[#414141] hover:border-zinc-300">
                     Length
                   </button>
 
                   {/* Definition Dropdown */}
-                  <button className="h-[21px] min-h-0 cursor-pointer gap-0.5 rounded-2xl border border-transparent bg-[#EBEBEB] px-2.5 py-[3px] text-[11px] leading-0 text-[#414141] hover:border-zinc-300">
+                  <button className="h-[21px] min-h-0 gap-0.5 rounded-2xl border border-transparent bg-[#EBEBEB] px-2.5 py-[3px] text-[11px] leading-0 text-[#414141] hover:border-zinc-300">
                     Definition
                   </button>
                 </div>
@@ -63,7 +62,7 @@ export const InputSection = ({ dict }) => {
 
                 <button
                   size="sm"
-                  className="flex h-10 w-10 cursor-pointer flex-col items-center justify-center rounded-full bg-white px-3 font-sans text-zinc-900 shadow-lg hover:bg-white hover:shadow-sm disabled:cursor-not-allowed disabled:bg-white disabled:text-zinc-500 disabled:opacity-100 lg:rounded-2xl xl:h-[71px] xl:w-28 xl:px-7"
+                  className="flex h-10 w-10 flex-col items-center justify-center rounded-full bg-white px-3 font-sans text-zinc-900 shadow-lg hover:bg-white hover:shadow-sm disabled:cursor-not-allowed disabled:bg-white disabled:text-zinc-500 disabled:opacity-100 lg:rounded-2xl xl:h-[71px] xl:w-28 xl:px-7"
                 >
                   <WandSparkles className="h-4 w-4" />
                   <span className="hidden xl:inline">Generate</span>
