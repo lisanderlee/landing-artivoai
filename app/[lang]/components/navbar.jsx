@@ -54,7 +54,7 @@ export default function NavBar({ dict, lang }) {
   }
 
   return (
-    <header className="sticky top-0 z-10 w-full py-6">
+    <header className="fixed top-0 right-0 z-10 w-full py-6">
       <nav aria-label="Global" className="mx-auto flex max-w-[1730px] items-center justify-between">
         <div className="flex lg:flex-1">
           <Link href={getLocalizedPath('/')} className="-m-1.5 p-1.5">
