@@ -47,6 +47,20 @@
       "definition": "Elige la resolución de tu video",
       "background": "Elige el fondo para tu imagen",
       "product": "Elige el producto para transferencia"
+    },
+    "cards": {
+      "card_1": {
+        "title": "Para Creativos y Diseñadores",
+        "description": "Explora nuevas ideas y crea variaciones de imágenes con IA en segundos."
+      },
+      "card_2": {
+        "title": "Para Empresas",
+        "description": "Acelera la creación de contenido y mejora la productividad con IA."
+      },
+      "card_3": {
+        "title": "Para Desarrolladores",
+        "description": "Integra IA en tus aplicaciones y servicios de manera sencilla."
+      }
     }
   },
   "use_cases": {

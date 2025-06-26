@@ -41,6 +41,20 @@
     "input": {
       "bot": "AI prompt Generator",
       "placeholder": "Type your prompt here..."
+    },
+    "cards": {
+      "card_1": {
+        "title": "For Creatives & Designers",
+        "description": "Explore new ideas and generate image variations with AI in seconds."
+      },
+      "card_2": {
+        "title": "For Businesses",
+        "description": "Speed up content creation and boost productivity with AI."
+      },
+      "card_3": {
+        "title": "For Developers",
+        "description": "Easily integrate AI into your apps and services."
+      }
     }
   },
   "use_cases": {

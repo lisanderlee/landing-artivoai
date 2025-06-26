@@ -2,6 +2,7 @@ import NavBar from './components/navbar'
 import { getDictionary } from './dictionaries'
 import { HeroSection } from './components/hero-section'
 import { InputSection } from './components/input-section'
+import { Cards } from './components/cards'
 
 export default async function Home({ params }) {
   const { lang } = await params
@@ -30,6 +31,7 @@ export default async function Home({ params }) {
         {/* <Footer /> */}
       </div>
       <InputSection dict={dict} lang={lang} />
+      <Cards dict={dict} />
     </>
   )
 }
