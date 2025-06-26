@@ -6,11 +6,11 @@ import { ImageIcon, Film, Focus, Replace, Grip, Ratio } from 'lucide-react'
 
 export const HeroSection = ({ dict }) => {
   return (
-    <section className="mx-auto mb-32 flex max-w-[1730px] items-center justify-between gap-6 pt-16.5 lg:gap-10">
-      <div className="w-full lg:w-8/12">
-        <h1 className="text-8xl font-normal text-black">
-          <span>{dict.home.title.pre}</span>
-          <span className="text-[#7A57D2]">{dict.home.title.highlight}</span>
+    <section className="pt-16. mx-auto mb-32 flex max-w-[1730px] items-center justify-between gap-6">
+      <div className="w-full lg:w-4/7">
+        <h1 className="w-full text-8xl font-normal text-black">
+          <span>{dict.home.title.pre} </span>
+          <span className="text-[#7A57D2]">{dict.home.title.highlight} </span>
           <span>{dict.home.title.post}</span>
         </h1>
         <p className="mt-4 w-2/3 text-lg text-[#585858] lg:mt-8">{dict.home.description}</p>
@@ -18,7 +18,7 @@ export const HeroSection = ({ dict }) => {
           {dict.buttons.start_creating}
         </button>
       </div>
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full items-center justify-between lg:w-3/7">
         <div className="hidden w-4/5 flex-row-reverse items-end justify-start lg:flex">
           <Image
             width={700}

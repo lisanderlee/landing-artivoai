@@ -1,29 +1,22 @@
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip'
-import { BotMessageSquare, Candy, ImagePlusIcon, WandSparkles } from 'lucide-react'
+import { BotMessageSquare, Candy, Image, ImagePlusIcon, WandSparkles } from 'lucide-react'
 
 export const InputSection = ({ dict }) => {
   return (
-    <div className="grid -translate-y-20 grid-cols-7 items-end gap-4 lg:gap-2">
+    <section className="grid -translate-y-20 grid-cols-7 items-end gap-4 lg:gap-2">
       <div className="col-span-0 lg:col-span-1"></div>
 
-      <div className="col-span-7 mx-auto w-full max-w-4xl gap-2 rounded-[20px] shadow-sm lg:col-span-5">
+      <div className="col-span-7 mx-auto w-full max-w-4xl gap-2 rounded-[20px] lg:col-span-5">
         <div className="flex w-full flex-col items-start gap-2 lg:flex-row">
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-zinc-200">
-                <BotMessageSquare className="h-4 w-4" />
-              </div>
-            </TooltipTrigger>
-            <TooltipContent side="left" className="text-xs">
-              <p>AI Prompt Generator</p>
-            </TooltipContent>
-          </Tooltip>
+          <div className="rounded-md bg-white p-2.5 text-zinc-950 transition-colors">
+            <BotMessageSquare className="h-4 w-4" />
+          </div>
           {/* Prompt Input Area */}
-          <div className="w-full">
+          <div className="w-full rounded-[20px] shadow-sm">
             <div className="grid max-h-36 min-h-28 w-full flex-1 grid-cols-2 grid-rows-3 items-end gap-1 rounded-[20px] border-none bg-white p-2.5 shadow-sm lg:min-h-32 lg:grid-cols-5 lg:p-3">
               <textarea
                 rows={3}
-                placeholder="Type your message here."
+                placeholder={dict.home.input.placeholder}
                 className="col-span-5 row-span-2 mb-4 resize-none border-0 bg-transparent p-0 font-sans text-sm shadow-none focus:ring-0 focus:outline-0 focus-visible:ring-0 focus-visible:outline-0 sm:mb-0 lg:col-span-3"
               />
               <div className="row-span-1 hidden h-full w-full lg:col-span-2" />
@@ -97,6 +90,6 @@ export const InputSection = ({ dict }) => {
         </div>
       </div>
       <div className="col-span-0 lg:col-span-1"></div>
-    </div>
+    </section>
   )
 }

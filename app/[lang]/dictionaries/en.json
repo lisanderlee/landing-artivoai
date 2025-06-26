@@ -37,6 +37,10 @@
       "product": "Product Transfer",
       "upscale": "Image Upscale",
       "resize": "Image Resize"
+    },
+    "input": {
+      "bot": "AI prompt Generator",
+      "placeholder": "Type your prompt here..."
     }
   },
   "use_cases": {

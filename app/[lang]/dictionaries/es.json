@@ -37,6 +37,16 @@
       "product": "Transferencia de Producto",
       "upscale": "Mejorar Resolución",
       "resize": "Redimensionar Imagen"
+    },
+    "input": {
+      "bot": "Generador de prompts de IA",
+      "placeholder": "Escribe tu mensaje aquí...",
+      "size": "Elige el tamaño de tu imagen",
+      "quality": "Elige la resolución para tu video",
+      "length": "Elige la duración de tu video",
+      "definition": "Elige la resolución de tu video",
+      "background": "Elige el fondo para tu imagen",
+      "product": "Elige el producto para transferencia"
     }
   },
   "use_cases": {
