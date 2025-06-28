@@ -6,7 +6,7 @@ import { ImageIcon, Film, Focus, Replace, Grip, Ratio } from 'lucide-react'
 
 export const HeroSection = ({ dict }) => {
   return (
-    <section className="pt-16. mx-auto mb-32 flex max-w-[1730px] items-center justify-between gap-6">
+    <section className="mx-auto mb-32 flex max-w-[1730px] items-center justify-between gap-6 pt-25">
       <div className="w-full lg:w-4/7">
         <h1 className="w-full text-8xl font-normal text-black">
           <span>{dict.home.title.pre} </span>
@@ -35,7 +35,7 @@ export const HeroSection = ({ dict }) => {
             className="-mr-10 -mb-10 h-60 w-60 rounded-[38px] object-cover"
           />
         </div>
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="hidden flex-col items-center justify-center gap-4 lg:flex">
           <Tooltip>
             <TooltipTrigger asChild>
               <button className="rounded-md bg-zinc-800 p-2.5 text-white transition-colors hover:bg-white hover:text-zinc-800">
