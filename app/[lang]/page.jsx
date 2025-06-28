@@ -6,6 +6,7 @@ import { Cards } from './components/cards'
 import { UseCases } from './components/use-cases'
 import { Advertisement } from './components/advertisement'
 import { RoadMap } from './components/road-map'
+import { Pricing } from './components/pricing'
 
 export default async function Home({ params }) {
   const { lang } = await params
@@ -38,6 +39,7 @@ export default async function Home({ params }) {
       <UseCases dict={dict} />
       <Advertisement dict={dict} />
       <RoadMap dict={dict} />
+      <Pricing dict={dict} />
     </>
   )
 }
