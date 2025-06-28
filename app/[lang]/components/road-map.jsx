@@ -94,14 +94,47 @@ export const RoadMap = ({ dict }) => {
                 <motion.path
                   d="M2 13.5C0.89543 13.5 0 14.3954 0 15.5C0 16.6046 0.89543 17.5 2 17.5V13.5ZM69.9142 16.9142C70.6953 16.1332 70.6953 14.8668 69.9142 14.0858L57.1863 1.35786C56.4052 0.576816 55.1389 0.576816 54.3579 1.35786C53.5768 2.13891 53.5768 3.40524 54.3579 4.18629L65.6716 15.5L54.3579 26.8137C53.5768 27.5948 53.5768 28.8611 54.3579 29.6421C55.1389 30.4232 56.4052 30.4232 57.1863 29.6421L69.9142 16.9142ZM2 15.5V17.5H68.5V15.5V13.5H2V15.5Z"
                   fill="url(#lineGradient)"
-                  initial={{ clipPath: 'inset(0 100% 0 0)' }}
-                  animate={{ clipPath: 'inset(0 0% 0 0)' }}
-                  transition={{ duration: 1.2, delay: 0.8, ease: 'easeInOut' }}
+                  initial={isInView ? { pathLength: 0 } : {}}
+                  animate={isInView ? { pathLength: 1 } : {}}
+                  strokeDasharray={'0 1'}
+                  transition={{
+                    duration: 1.2,
+                    delay: 0.8,
+                    ease: 'easeInOut',
+                  }}
                 />
                 <defs>
                   <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#3B82F6" />
-                    <stop offset="100%" stopColor="#8B5CF6" />
+                    <motion.stop
+                      offset="0%"
+                      stopColor="#0073E6"
+                      animate={isInView ? { offset: ['-100%', '100%'] } : {}}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: 'loop',
+                        repeatDelay: 2,
+                        ease: 'linear',
+                      }}
+                    />
+                    <motion.stop
+                      offset="100%"
+                      stopColor="#0073E600"
+                      animate={
+                        isInView
+                          ? {
+                              offset: ['0%', '200%'], // Sync with the first stop
+                            }
+                          : {}
+                      }
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: 'loop',
+                        ease: 'linear',
+                        repeatDelay: 2,
+                      }}
+                    />
                   </linearGradient>
                 </defs>
               </motion.svg>
