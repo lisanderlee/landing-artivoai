@@ -7,7 +7,9 @@ import { cn } from '@/lib/utils'
 
 export const Pricing = () => {
   const sectionRef = useRef(null)
+  const enterpriseRef = useRef(null)
   const isInView = useInView(sectionRef, { margin: '-100px' })
+  const isEnterpriseInView = useInView(enterpriseRef, { margin: '-100px' })
   return (
     <section
       ref={sectionRef}
@@ -67,6 +69,50 @@ export const Pricing = () => {
           features={['Credits', 'Credits', 'Credits']}
         />
       </div>
+      <motion.div
+        ref={enterpriseRef}
+        id="enterprise"
+        className="mt-10 flex w-full items-end justify-between rounded-[20px] px-9 py-6 shadow-[0px_1px_12.7px_-7px_rgba(0,0,0,0.25)]"
+        initial={{ opacity: 0, scale: 1.05, y: 20 }}
+        animate={isEnterpriseInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
+        <div className="flex gap-22">
+          <div className="max-w-84">
+            <h6 className="flex items-center">
+              <Star className="h-5.5 w-5.5 fill-[#8AB0FE] text-[#8AB0FE]" />
+              <span className="ml-2 text-5xl font-semibold text-[#09090B]">Enterprise</span>
+            </h6>
+            <p className="mt-6 text-lg leading-8 font-light text-[#575757]">
+              No pierdas tu ventaja competitiva. Trae a tu compania al proximo siglo con la ayuda de
+              Artivo.
+            </p>
+          </div>
+          <div className="text-lg font-light text-[#26172F]">
+            <p>What&apos;s included:</p>
+            <ul className="mt-3 list-none space-y-1 pl-0">
+              <li className="flex items-center gap-2">
+                <Diamond className="h-4 w-4 fill-[#1B0C26] text-[#1B0C26]" />
+                <span className="text-[#36283E]">Credits</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Diamond className="h-4 w-4 fill-[#1B0C26] text-[#1B0C26]" />
+                <span className="text-[#36283E]">Credits</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Diamond className="h-4 w-4 fill-[#1B0C26] text-[#1B0C26]" />
+                <span className="text-[#36283E]">Credits</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex h-full w-full flex-1 items-stretch justify-end">
+          <button className="cursor-pointer rounded-[10px] border px-10 py-2 text-[20px] leading-8 transition-all hover:bg-[#1B0C25] hover:text-zinc-50">
+            Contact Us
+          </button>
+        </div>
+      </motion.div>
     </section>
   )
 }
@@ -106,8 +152,8 @@ const PricingCard = ({ title, description, price, buttonText, features, isPopula
           className={cn(
             'mt-6 w-full cursor-pointer rounded-[10px] border py-2 text-[20px] leading-8 transition-all',
             isPopular
-              ? 'bg-[#09090B] text-white hover:bg-[#1B0C26] hover:text-white'
-              : 'bg-white text-[#09090B] hover:bg-[#F5F5F5] hover:text-zinc-800',
+              ? 'bg-[#09090B] text-white hover:bg-[#F5F5F5] hover:text-zinc-800'
+              : 'bg-white text-[#09090B] hover:bg-[#1B0C26] hover:text-zinc-50',
           )}
         >
           {buttonText}
