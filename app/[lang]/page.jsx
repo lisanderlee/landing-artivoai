@@ -8,6 +8,7 @@ import { Advertisement } from './components/advertisement'
 import { RoadMap } from './components/road-map'
 import { Pricing } from './components/pricing'
 import { MarqueeText } from './components/marquee-text'
+import { Faqs } from './components/faqs'
 
 export default async function Home({ params }) {
   const { lang } = await params
@@ -35,13 +36,14 @@ export default async function Home({ params }) {
         {/* <Faq /> */}
         {/* <Footer /> */}
       </div>
-      <InputSection dict={dict} lang={lang} />
+      <InputSection dict={dict} />
       <Cards dict={dict} />
       <UseCases dict={dict} />
       <Advertisement dict={dict} />
       <RoadMap dict={dict} />
       <Pricing dict={dict} />
       <MarqueeText dict={dict} />
+      <Faqs dict={dict} />
     </>
   )
 }

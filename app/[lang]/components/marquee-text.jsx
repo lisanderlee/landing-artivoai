@@ -24,7 +24,7 @@ export const MarqueeText = () => {
     ))
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="mb-16 w-full overflow-hidden">
       <motion.div
         className="flex"
         animate={{
