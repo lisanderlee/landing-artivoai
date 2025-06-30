@@ -9,6 +9,7 @@ import { RoadMap } from './components/road-map'
 import { Pricing } from './components/pricing'
 import { MarqueeText } from './components/marquee-text'
 import { Faqs } from './components/faqs'
+import { Footer } from './components/footer'
 
 export default async function Home({ params }) {
   const { lang } = await params
@@ -44,6 +45,7 @@ export default async function Home({ params }) {
       <Pricing dict={dict} />
       <MarqueeText dict={dict} />
       <Faqs dict={dict} />
+      <Footer dict={dict} />
     </>
   )
 }

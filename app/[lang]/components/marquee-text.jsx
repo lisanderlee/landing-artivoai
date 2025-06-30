@@ -24,7 +24,7 @@ export const MarqueeText = () => {
     ))
 
   return (
-    <div className="mb-16 w-full overflow-hidden">
+    <section className="mb-16 w-full overflow-hidden">
       <motion.div
         className="flex"
         animate={{
@@ -41,6 +41,6 @@ export const MarqueeText = () => {
       >
         {marqueeContent}
       </motion.div>
-    </div>
+    </section>
   )
 }
