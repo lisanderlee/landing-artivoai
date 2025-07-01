@@ -54,7 +54,7 @@ const navItems = [
   { name: 'Pricing', href: '/pricing', dictKey: 'pricing' },
 ]
 
-export default function NavBar({ dict, lang }) {
+export const NavBar = ({ dict, lang }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [hasScrolled, setHasScrolled] = useState(false)
   const getLocalizedPath = (path) => {
