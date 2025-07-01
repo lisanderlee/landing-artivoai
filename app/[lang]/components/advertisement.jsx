@@ -17,7 +17,7 @@ import {
 
 export const Advertisement = ({ dict }) => {
   return (
-    <section className="m-10 text-[#1D0D27] lg:mb-30">
+    <section className="mx-4 my-10 text-[#1D0D27] lg:mb-30">
       <div className="flex w-full flex-col items-center justify-center text-center">
         <p className="rounded-[40px] border border-[#7A57D2] px-10 py-1.5 font-medium text-[#09090B] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]">
           TODO EN UN SOLO LUGAR

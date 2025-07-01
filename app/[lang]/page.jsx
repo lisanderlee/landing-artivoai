@@ -28,14 +28,6 @@ export default async function Home({ params }) {
             Flux - ChatGPT - VEO 3 - Flux - ChatGPT - VEO 3 - Kling - Flux Pro - Flux{' '}
           </p>
         </div>
-        {/* <Hero />
-      <UseCases />
-      <Ticker />
-      <Workflows />
-      <PriceSection />
-      <Testimonials /> */}
-        {/* <Faq /> */}
-        {/* <Footer /> */}
       </div>
       <InputSection dict={dict} />
       <Cards dict={dict} />

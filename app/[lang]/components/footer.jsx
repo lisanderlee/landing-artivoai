@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const Footer = ({ dict }) => {
   return (
-    <footer className="mx-10 mt-10 text-[#1D0D27]">
+    <footer className="mx-4 mt-10 text-[#1D0D27]">
       <div className="items-center rounded-t-[20px] bg-gradient-to-b from-[#38203F] to-[#1B0C25] p-8 lg:px-20 lg:pt-16">
         <div className="w-max rounded-[62px] bg-white px-3 text-[15px] font-medium text-[#09090B] uppercase shadow-sm">
           Join the future
