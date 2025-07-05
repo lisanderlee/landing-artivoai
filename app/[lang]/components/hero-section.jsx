@@ -89,11 +89,11 @@ export const HeroSection = ({ dict }) => {
               {dict.home.title.highlight}{' '}
             </motion.span>
           </motion.span>
-          <motion.span className="inline-block" variants={wordVariants} custom={2}>
+          <motion.span className="mb-4 inline-block" variants={wordVariants} custom={2}>
             {dict.home.title.post}
           </motion.span>
         </motion.h1>
-        <motion.p className="mt-4 w-2/3 text-lg text-[#585858] lg:mt-8" variants={itemVariants}>
+        <motion.p className="w-2/3 text-lg text-[#585858] lg:mt-8" variants={itemVariants}>
           {dict.home.description}
         </motion.p>
         <motion.button
