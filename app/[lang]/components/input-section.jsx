@@ -15,6 +15,7 @@ export const InputSection = ({ dict }) => {
             <div className="grid max-h-36 min-h-28 w-full flex-1 grid-cols-2 grid-rows-3 items-end gap-1 rounded-[20px] border-none bg-white p-2.5 shadow-sm lg:min-h-32 lg:grid-cols-5 lg:p-3">
               <textarea
                 rows={3}
+                disabled
                 placeholder={dict.home.input.placeholder}
                 className="col-span-5 row-span-2 mb-4 resize-none border-0 bg-transparent p-0 font-sans text-sm shadow-none focus:ring-0 focus:outline-0 focus-visible:ring-0 focus-visible:outline-0 sm:mb-0 lg:col-span-3"
               />
