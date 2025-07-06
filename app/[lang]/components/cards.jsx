@@ -1,27 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const cardsData = [
-  {
-    image: '/images/card-1.png',
-    title: 'Para Creativos y Diseñadores',
-    description: 'Explora nuevas ideas y crea variaciones de imágenes con IA en segundos.',
-    link: '/',
-  },
-  {
-    image: '/images/card-2.png',
-    title: 'Para Empresas',
-    description: 'Acelera la creación de contenido y mejora la productividad con IA.',
-    link: '/',
-  },
-  {
-    image: '/images/card-3.png',
-    title: 'Para Desarrolladores',
-    description: 'Integra IA en tus aplicaciones y servicios de manera sencilla.',
-    link: '/',
-  },
-]
-
 export const Cards = ({ dict }) => {
   return (
     <section className="mx-auto my-10 flex max-w-[1730px] items-center justify-between gap-10 px-10 lg:mt-10 lg:mb-30">

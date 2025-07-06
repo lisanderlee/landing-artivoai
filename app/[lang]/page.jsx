@@ -1,5 +1,4 @@
 import { getDictionary } from './dictionaries'
-import { InputSection } from './components/input-section'
 import { Cards } from './components/cards'
 import { UseCases } from './components/use-cases'
 import { Advertisement } from './components/advertisement'
