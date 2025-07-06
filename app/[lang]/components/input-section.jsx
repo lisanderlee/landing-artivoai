@@ -1,11 +1,23 @@
+'use client'
+
 import { BotMessageSquare, Candy, ImagePlusIcon, WandSparkles } from 'lucide-react'
+import { useRef } from 'react'
+import { motion, useInView } from 'motion/react'
 
 export const InputSection = ({ dict }) => {
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { margin: '-100px' })
+
   return (
-    <section className="grid -translate-y-20 grid-cols-7 items-end gap-4 lg:gap-2">
+    <section ref={sectionRef} className="grid -translate-y-20 grid-cols-7 items-end gap-4 lg:gap-2">
       <div className="col-span-0 lg:col-span-1"></div>
 
-      <div className="col-span-7 mx-auto w-full max-w-4xl gap-2 rounded-[20px] lg:col-span-5">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
+        className="col-span-7 mx-auto w-full max-w-4xl gap-2 rounded-[20px] lg:col-span-5"
+      >
         <div className="flex w-full flex-col items-start gap-2 lg:flex-row">
           <div className="rounded-md bg-white p-2.5 text-zinc-950 transition-colors">
             <BotMessageSquare className="h-4 w-4" />
@@ -88,7 +100,7 @@ export const InputSection = ({ dict }) => {
             </Carousel> */}
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="col-span-0 lg:col-span-1"></div>
     </section>
   )
