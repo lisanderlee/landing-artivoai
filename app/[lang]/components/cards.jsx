@@ -1,72 +1,123 @@
 'use client'
 
-import { useInView, motion } from 'motion/react'
+import { useInView, motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRef } from 'react'
 
-const itemVariants = {
-  hidden: { y: 50, opacity: 0 },
+const cardVariants = {
+  hidden: {
+    y: 50,
+    opacity: 0,
+    scale: 0.98,
+  },
   visible: {
     y: 0,
     opacity: 1,
+    scale: 1,
     transition: {
-      duration: 0.8,
-      ease: 'easeOut',
+      type: 'spring',
+      damping: 15,
+      stiffness: 100,
+      mass: 0.5,
     },
   },
 }
 
-const Cards = ({ dict }) => {
+const textVariants = {
+  hidden: {
+    y: 20,
+    opacity: 0,
+    filter: 'blur(2px)',
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    filter: 'blur(0px)',
+    transition: {
+      duration: 0.6,
+      ease: [0.2, 0.8, 0.4, 1],
+    },
+  },
+}
+
+const buttonVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.3,
+      type: 'spring',
+      stiffness: 300,
+      damping: 15,
+    },
+  },
+  hover: {
+    scale: 1.05,
+    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
+  },
+  tap: {
+    scale: 0.98,
+  },
+}
+
+export const Cards = ({ dict }) => {
   const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { margin: '-100px' })
+  const isInView = useInView(sectionRef, {
+    margin: '-100px',
+  })
+
   return (
-    <section
+    <motion.section
       ref={sectionRef}
       className="mx-auto my-10 flex max-w-[1730px] items-center justify-between gap-10 px-10 lg:mt-10 lg:mb-30"
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      variants={{
+        visible: {
+          transition: {
+            staggerChildren: 0.15,
+            delayChildren: 0.1,
+          },
+        },
+      }}
     >
       <Card
         image="/images/card-1.png"
         title={dict.home.cards.card_1.title}
         description={dict.home.cards.card_1.description}
         link="/"
-        isInView={isInView}
       />
       <Card
         image="/images/card-2.png"
         title={dict.home.cards.card_2.title}
         description={dict.home.cards.card_2.description}
         link="/"
-        isInView={isInView}
       />
       <Card
         image="/images/card-3.png"
         title={dict.home.cards.card_3.title}
         description={dict.home.cards.card_3.description}
         link="/"
-        isInView={isInView}
       />
-    </section>
+    </motion.section>
   )
 }
 
-const Card = ({ image, title, description, link, isInView }) => {
+const Card = ({ image, title, description, link }) => {
   return (
-    <div className="relative">
-      <motion.h3
-        className="font-semibold text-[#4B4B4B]"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-      >
+    <motion.div className="relative" variants={cardVariants}>
+      <motion.h3 className="font-semibold text-[#4B4B4B]" variants={textVariants}>
         {title}
       </motion.h3>
 
       <motion.div
         className="relative mt-6 h-71 w-md overflow-hidden rounded-[20px]"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        variants={textVariants}
       >
         <Image
           src={image}
@@ -74,19 +125,20 @@ const Card = ({ image, title, description, link, isInView }) => {
           width={1200}
           height={800}
           className="h-full w-full object-cover"
+          priority={false}
+          loading="lazy"
         />
 
         <motion.div
           className="absolute right-6 bottom-4 z-20"
-          variants={itemVariants}
-          whileHover={{
-            scale: 1.05,
-            boxShadow: '0 15px 35px -5px rgba(122, 87, 210, 0.3)',
-          }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          variants={buttonVariants}
+          whileHover="hover"
+          whileTap="tap"
         >
-          <Link href={link} className="inline-block rounded-[10px] bg-white px-3 py-2.5 shadow-md">
+          <Link
+            href={link}
+            className="inline-block rounded-[10px] bg-white px-3 py-2.5 shadow-md transition-colors hover:bg-gray-50"
+          >
             Ver Caso &gt;&gt;
           </Link>
         </motion.div>
@@ -94,14 +146,11 @@ const Card = ({ image, title, description, link, isInView }) => {
 
       <motion.p
         className="mt-7.5 w-2/3 text-xl text-[#636363]"
-        initial={{ opacity: 0, x: -20, scale: 1.05 }}
-        animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
-        transition={{ duration: 0.6 }}
+        variants={textVariants}
+        transition={{ delay: 0.2 }}
       >
         {description}
       </motion.p>
-    </div>
+    </motion.div>
   )
 }
-
-export { Cards }
