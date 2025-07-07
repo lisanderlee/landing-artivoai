@@ -1,27 +1,165 @@
+'use client'
+
+import { motion, useInView } from 'framer-motion'
 import { BotMessageSquare } from 'lucide-react'
 import Image from 'next/image'
+import { useRef } from 'react'
 
 export const UseCases = ({ dict }) => {
+  // Animation variants
+
+  const cardVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        damping: 15,
+        stiffness: 100,
+      },
+    },
+  }
+
+  const textVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut',
+      },
+    },
+  }
+
+  const circleVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 150,
+        damping: 10,
+      },
+    },
+  }
+
+  const svgVariants = {
+    hidden: { rotate: -30, opacity: 0 },
+    visible: {
+      rotate: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.3,
+        type: 'spring',
+        stiffness: 100,
+        damping: 15,
+      },
+    },
+  }
+
+  const messageVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    }),
+  }
+
+  const rightMessageVariants = {
+    hidden: { opacity: 0, x: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    }),
+  }
+
   return (
-    <section className="mx-auto my-10 grid max-w-[1730px] grid-cols-5 gap-10 px-10 text-[#1D0D27] lg:mt-10 lg:mb-30">
-      <div className="relative col-span-3 flex h-full items-center justify-between gap-7 rounded-[20px] bg-[url('/images/background.png')] bg-cover bg-center bg-no-repeat py-8 pr-16 pl-13">
+    <motion.section
+      className="mx-auto my-10 grid max-w-[1730px] grid-cols-5 gap-10 px-10 text-[#1D0D27] lg:mt-10 lg:mb-30"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ staggerChildren: 0.15, delayChildren: 0.2 }}
+    >
+      {/* First Card */}
+      <motion.div
+        className="relative col-span-3 flex h-full items-center justify-between gap-7 rounded-[20px] bg-[url('/images/background.png')] bg-cover bg-center bg-no-repeat py-8 pr-16 pl-13"
+        variants={cardVariants}
+      >
         <div className="absolute inset-0 rounded-[20px] bg-white/10 backdrop-blur-[89px]" />
         <div className="relative z-10 flex-1">
-          <h4 className="text-[40px] leading-10 font-semibold">
+          <motion.h4
+            className="text-[40px] leading-10 font-semibold"
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+          >
             Todos los modelos de AI en un solo lugar.
-          </h4>
-          <p className="mt-4.5 w-6/7 text-[20px]">
+          </motion.h4>
+          <motion.p
+            className="mt-4.5 w-6/7 text-[20px]"
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            transition={{ delay: 0.1 }}
+          >
             un solo precio por todo los modelos un solo precio por todo los modelos un solo precio
             por todo los modelos
-          </p>
+          </motion.p>
         </div>
         <div className="relative z-10 flex flex-1 items-center justify-center">
-          <div className="flex h-81 w-81 items-center justify-center rounded-full bg-[#D2CCD98C]">
-            <div className="relative flex h-57 w-57 items-center justify-center rounded-full bg-[#F7DCCFA8] shadow-[0px_-2px_26px_-7px_rgba(0,0,0,0.25)]">
-              <div className="absolute top-0 left-6 h-12 w-12 rounded-full bg-white" />
-              <div className="absolute top-1/2 -right-6.5 h-13 w-13 -translate-y-1/2 transform rounded-full bg-white" />
-              <div className="absolute bottom-0 left-7 h-14 w-14 rounded-full bg-white" />
-              <div className="flex h-24.5 w-24.5 items-center justify-center rounded-full bg-zinc-800">
+          <motion.div
+            className="flex h-81 w-81 items-center justify-center rounded-full bg-[#D2CCD98C]"
+            initial="hidden"
+            whileInView="visible"
+            variants={circleVariants}
+            transition={{ delay: 0.05 }}
+          >
+            <motion.div
+              className="relative flex h-57 w-57 items-center justify-center rounded-full bg-[#F7DCCFA8] shadow-[0px_-2px_26px_-7px_rgba(0,0,0,0.25)]"
+              initial="hidden"
+              whileInView="visible"
+              variants={circleVariants}
+              transition={{ delay: 0.1 }}
+            >
+              <motion.div
+                className="absolute top-0 left-8 h-12 w-12 rounded-full bg-white"
+                initial="hidden"
+                whileInView="visible"
+                variants={circleVariants}
+                transition={{ delay: 0.2 }}
+              />
+              <motion.div
+                className="absolute top-1/2 -right-6.5 h-13 w-13 -translate-y-1/2 transform rounded-full bg-white"
+                initial="hidden"
+                whileInView="visible"
+                variants={circleVariants}
+                transition={{ delay: 0.3 }}
+              />
+              <motion.div
+                className="absolute bottom-0 left-7 h-14 w-14 rounded-full bg-white"
+                initial="hidden"
+                whileInView="visible"
+                variants={circleVariants}
+                transition={{ delay: 0.4 }}
+              />
+              <motion.div
+                className="flex h-24.5 w-24.5 items-center justify-center rounded-full bg-zinc-800"
+                variants={circleVariants}
+                transition={{ delay: 0.5 }}
+              >
                 <Image
                   src="/images/logo-icon.svg"
                   width={100}
@@ -29,23 +167,47 @@ export const UseCases = ({ dict }) => {
                   alt="Logo Icon"
                   className="h-8 w-8"
                 />
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
-      </div>
-      <div className="relative col-span-2 flex h-full items-center justify-between gap-7 rounded-[20px] bg-[url('/images/background.png')] bg-cover bg-center bg-no-repeat px-11 py-8">
+      </motion.div>
+
+      {/* Second Card */}
+      <motion.div
+        className="relative col-span-2 flex h-full items-center justify-between gap-7 rounded-[20px] bg-[url('/images/background.png')] bg-cover bg-center bg-no-repeat px-11 py-8"
+        initial="hidden"
+        whileInView="visible"
+        variants={cardVariants}
+        transition={{ delay: 0.2 }}
+      >
         <div className="absolute inset-0 rounded-[20px] bg-white/10 backdrop-blur-[89px]" />
         <div className="relative z-10 flex-1">
-          <h4 className="w-9/10 text-[40px] leading-10 font-semibold">
+          <motion.h4
+            className="w-9/10 text-[40px] leading-10 font-semibold"
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+          >
             Integrate con nuestra API y produce en cantidad
-          </h4>
-          <p className="mt-4.5 w-9/10 text-[20px]">
+          </motion.h4>
+          <motion.p
+            className="mt-4.5 w-9/10 text-[20px]"
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            transition={{ delay: 0.1 }}
+          >
             Escribe prompts, navega y accede a todas las herramientas en español, con soporte en tu
             idioma cuando lo necesites.
-          </p>
+          </motion.p>
         </div>
-        <div className="absolute right-0 bottom-0 h-46 w-46">
+        <motion.div
+          className="absolute right-0 bottom-0 h-46 w-46"
+          initial="hidden"
+          whileInView="visible"
+          variants={svgVariants}
+        >
           <svg
             width="184"
             height="184"
@@ -61,51 +223,80 @@ export const UseCases = ({ dict }) => {
               strokeLinejoin="round"
             />
           </svg>
-        </div>
-      </div>
-      <div className="relative col-span-5 grid grid-cols-3 gap-10 rounded-[20px] bg-[url('/images/background.png')] bg-cover bg-center bg-no-repeat py-12 pr-16 pl-13">
+        </motion.div>
+      </motion.div>
+
+      {/* Third Card */}
+      <motion.div
+        className="relative col-span-5 grid grid-cols-3 gap-10 rounded-[20px] bg-[url('/images/background.png')] bg-cover bg-center bg-no-repeat py-12 pr-16 pl-13"
+        initial="hidden"
+        whileInView="visible"
+        variants={cardVariants}
+        transition={{ delay: 0.4 }}
+      >
         <div className="absolute inset-0 rounded-[20px] bg-white/10 backdrop-blur-[89px]" />
 
         <div className="relative col-span-1">
-          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-zinc-800">
+          <motion.div
+            className="flex h-9 w-9 items-center justify-center rounded-md bg-zinc-800"
+            initial="hidden"
+            whileInView="visible"
+            variants={circleVariants}
+            transition={{ delay: 0.05 }}
+          >
             <BotMessageSquare className="h-4 w-4 text-white" />
-          </div>
-          <h4 className="mt-3 text-[40px] leading-10 font-semibold">
+          </motion.div>
+          <motion.h4
+            className="mt-3 text-[40px] leading-10 font-semibold"
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            transition={{ delay: 0.1 }}
+          >
             Utiliza nuestros bots inteligentes para crear tus prompt.
-          </h4>
-          <p className="mt-5 text-[20px]">
+          </motion.h4>
+          <motion.p
+            className="mt-5 text-[20px]"
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            transition={{ delay: 0.1 }}
+          >
             Escribe prompts, navega y accede a todas las herramientas en español, con soporte en tu
             idioma cuando lo necesites.
-          </p>
+          </motion.p>
         </div>
 
         <div className="relative col-span-2 flex translate-y-20 flex-col items-center justify-center gap-4">
-          <div className="flex w-full items-center gap-4">
-            <div className="h-25 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
-              <BotMessageSquare className="h-6 w-6 text-zinc-50" />
-            </div>
-          </div>
-          <div className="flex w-full items-center gap-4">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
-              <BotMessageSquare className="h-6 w-6 text-zinc-50" />
-            </div>
-            <div className="h-17 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />
-          </div>
-          <div className="flex w-full items-center gap-4">
-            <div className="h-25 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
-              <BotMessageSquare className="h-6 w-6 text-zinc-50" />
-            </div>
-          </div>
-          <div className="flex w-full items-center gap-4">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
-              <BotMessageSquare className="h-6 w-6 text-zinc-50" />
-            </div>
-            <div className="h-17 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />
-          </div>
+          {[0, 1, 2, 3].map((i) => (
+            <motion.div
+              key={i}
+              className="flex w-full items-center gap-4"
+              initial="hidden"
+              whileInView="visible"
+              custom={i}
+              variants={i % 2 === 0 ? messageVariants : rightMessageVariants}
+              transition={{ delay: i * 0.1, duration: 0.5, ease: 'easeOut' }}
+            >
+              {i % 2 === 0 ? (
+                <>
+                  <div className="h-25 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
+                    <BotMessageSquare className="h-6 w-6 text-zinc-50" />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800">
+                    <BotMessageSquare className="h-6 w-6 text-zinc-50" />
+                  </div>
+                  <div className="h-17 w-4/5 rounded-[40px] bg-[#FFFFFF4F] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]" />
+                </>
+              )}
+            </motion.div>
+          ))}
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }
