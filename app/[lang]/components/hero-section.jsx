@@ -125,11 +125,6 @@ export const HeroSection = ({ dict }) => {
             initial={{ x: 100, opacity: 0, rotate: 5 }}
             animate={{ x: 0, opacity: 1, rotate: 0 }}
             transition={{ duration: 1, delay: 1.2, ease: 'easeOut' }}
-            whileHover={{
-              scale: 1.02,
-              rotate: -1,
-              transition: { duration: 0.3 },
-            }}
           >
             <motion.div
               animate={{
@@ -155,11 +150,6 @@ export const HeroSection = ({ dict }) => {
             initial={{ x: -50, opacity: 0, rotate: -5 }}
             animate={{ x: 0, opacity: 1, rotate: 0 }}
             transition={{ duration: 1, delay: 1.4, ease: 'easeOut' }}
-            whileHover={{
-              scale: 1.05,
-              rotate: 2,
-              transition: { duration: 0.3 },
-            }}
           >
             <motion.div
               className="-mr-10 -mb-10 h-60 w-60 overflow-hidden rounded-[38px]"
