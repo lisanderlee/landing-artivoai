@@ -6,17 +6,12 @@ import { motion, useInView } from 'motion/react'
 import React, { useEffect, useRef, useState } from 'react'
 
 export const RoadMap = ({ dict }) => {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { margin: '-100px' })
   return (
-    <section
-      ref={sectionRef}
-      className="mx-auto my-10 max-w-[1730px] px-10 text-[#1D0D27] lg:mt-10 lg:mb-30"
-    >
+    <section className="mx-auto my-10 max-w-[1730px] px-10 text-[#1D0D27] lg:mt-10 lg:mb-30">
       <div className="flex w-full flex-col items-center justify-center text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="rounded-[40px] border border-[#7A57D2] px-10 py-1.5 font-medium text-[#09090B] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]"
         >
@@ -24,7 +19,7 @@ export const RoadMap = ({ dict }) => {
         </motion.p>
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-6 max-w-4xl text-6xl font-medium"
         >
@@ -32,7 +27,7 @@ export const RoadMap = ({ dict }) => {
         </motion.h3>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-2.5 max-w-2xl text-[20px] leading-6.5 text-black"
         >
@@ -46,8 +41,8 @@ export const RoadMap = ({ dict }) => {
         <figure className="relative grid h-full flex-1 grid-cols-16 grid-rows-12">
           <div className="relative col-start-5 col-end-13 row-start-1 row-end-3 grid h-full w-full grid-cols-8 grid-rows-2">
             <motion.div
-              initial={isInView ? { opacity: 0, x: -50 } : {}}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="h-full w-full rounded-[20px] bg-white shadow-sm"
               style={{
@@ -58,8 +53,8 @@ export const RoadMap = ({ dict }) => {
               }}
             />
             <motion.div
-              initial={isInView ? { opacity: 0, x: -50 } : {}}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 1.4 }}
               className="h-full w-full rounded-[20px] bg-white shadow-sm"
               style={{
@@ -71,8 +66,8 @@ export const RoadMap = ({ dict }) => {
             />
             <motion.div
               className="col-start-4 col-end-6 row-start-1 row-end-3 flex items-center justify-center"
-              initial={isInView ? { opacity: 0 } : {}}
-              animate={isInView ? { opacity: 1 } : {}}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
               <motion.svg
@@ -82,8 +77,8 @@ export const RoadMap = ({ dict }) => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="relative"
-                initial={isInView ? { scaleX: 0, transformOrigin: 'left center' } : {}}
-                animate={isInView ? { scaleX: 1 } : {}}
+                initial={{ scaleX: 0, transformOrigin: 'left center' }}
+                whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <path
@@ -94,8 +89,8 @@ export const RoadMap = ({ dict }) => {
                 <motion.path
                   d="M2 13.5C0.89543 13.5 0 14.3954 0 15.5C0 16.6046 0.89543 17.5 2 17.5V13.5ZM69.9142 16.9142C70.6953 16.1332 70.6953 14.8668 69.9142 14.0858L57.1863 1.35786C56.4052 0.576816 55.1389 0.576816 54.3579 1.35786C53.5768 2.13891 53.5768 3.40524 54.3579 4.18629L65.6716 15.5L54.3579 26.8137C53.5768 27.5948 53.5768 28.8611 54.3579 29.6421C55.1389 30.4232 56.4052 30.4232 57.1863 29.6421L69.9142 16.9142ZM2 15.5V17.5H68.5V15.5V13.5H2V15.5Z"
                   fill="url(#lineGradient)"
-                  initial={isInView ? { pathLength: 0 } : {}}
-                  animate={isInView ? { pathLength: 1 } : {}}
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
                   strokeDasharray={'0 1'}
                   transition={{
                     duration: 1.2,
@@ -108,7 +103,7 @@ export const RoadMap = ({ dict }) => {
                     <motion.stop
                       offset="0%"
                       stopColor="#0073E6"
-                      animate={isInView ? { offset: ['-100%', '100%'] } : {}}
+                      whileInView={{ offset: ['-100%', '100%'] }}
                       transition={{
                         duration: 1.5,
                         repeat: Infinity,
@@ -120,13 +115,7 @@ export const RoadMap = ({ dict }) => {
                     <motion.stop
                       offset="100%"
                       stopColor="#0073E600"
-                      animate={
-                        isInView
-                          ? {
-                              offset: ['0%', '200%'], // Sync with the first stop
-                            }
-                          : {}
-                      }
+                      whileInView={{ offset: ['0%', '200%'] }}
                       transition={{
                         duration: 1.5,
                         repeat: Infinity,
@@ -142,7 +131,7 @@ export const RoadMap = ({ dict }) => {
           </div>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 * 0.1 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -154,7 +143,7 @@ export const RoadMap = ({ dict }) => {
           />
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 + 2 * 0.1 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -167,7 +156,7 @@ export const RoadMap = ({ dict }) => {
 
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -179,7 +168,7 @@ export const RoadMap = ({ dict }) => {
           />
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -203,7 +192,7 @@ export const RoadMap = ({ dict }) => {
         <div className="relative grid h-full flex-1 grid-cols-24 grid-rows-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -215,7 +204,7 @@ export const RoadMap = ({ dict }) => {
           />
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -228,7 +217,7 @@ export const RoadMap = ({ dict }) => {
           {/* second row */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 + 1 * 0.1 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -240,7 +229,7 @@ export const RoadMap = ({ dict }) => {
           />
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 + 1 * 0.1 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -252,7 +241,7 @@ export const RoadMap = ({ dict }) => {
           />
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 + 1 * 0.1 }}
             className="-mr-4 h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -267,7 +256,7 @@ export const RoadMap = ({ dict }) => {
 
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 + 2 * 0.1 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -279,7 +268,7 @@ export const RoadMap = ({ dict }) => {
           />
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 + 2 * 0.1 }}
             className="h-full w-full rounded-[20px] bg-white shadow-sm"
             style={{
@@ -360,24 +349,29 @@ export const RoadMap = ({ dict }) => {
           </motion.div>
         </div> */}
       </div>
-      <div className="mt-5 flex items-center justify-around gap-30 text-2xl text-zinc-950">
-        <div className="my-4 flex items-center gap-3.5">
+      <motion.div
+        className="mt-5 flex items-center justify-around gap-30 text-2xl text-zinc-950"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ staggerChildren: 0.15, delayChildren: 0.2 }}
+      >
+        <FeatureItem>
           <PlugZap className="h-6 w-6" />
           Una integracion.
-        </div>
-        <div className="my-4 flex items-center gap-3.5">
+        </FeatureItem>
+        <FeatureItem>
           <Shrink className="h-6 w-6" />
           Todos los modelos.
-        </div>
-        <div className="my-4 flex items-center gap-3.5">
+        </FeatureItem>
+        <FeatureItem>
           <RefreshCcwDot className="h-6 w-6" />
           Procesamiento en lote.
-        </div>
-        <div className="my-4 flex items-center gap-3.5">
+        </FeatureItem>
+        <FeatureItem>
           <Shuffle className="h-6 w-6" />
           Workflows personalizados.
-        </div>
-      </div>
+        </FeatureItem>
+      </motion.div>
     </section>
   )
 }
@@ -668,3 +662,23 @@ const LShapedConnectors = ({ isInView }) => (
     <path id="output-flow-path-2" d="M 415 370 L 550 400" fill="none" opacity="0" />
   </svg>
 )
+
+const FeatureItem = ({ children }) => {
+  return (
+    <motion.div
+      className="my-4 flex items-center gap-3.5"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 100, damping: 15 }}
+    >
+      <motion.span
+        initial={{ scale: 0.8, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ type: 'spring', stiffness: 300 }}
+        className="flex items-center gap-3.5"
+      >
+        {children}
+      </motion.span>
+    </motion.div>
+  )
+}
