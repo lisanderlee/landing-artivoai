@@ -2,7 +2,7 @@
 
 import { PlugZap, RefreshCcwDot, Shrink, Shuffle } from 'lucide-react'
 import Image from 'next/image'
-import { motion, useInView } from 'motion/react'
+import { motion } from 'motion/react'
 import React, { useEffect, useRef, useState } from 'react'
 
 export const RoadMap = ({ dict }) => {

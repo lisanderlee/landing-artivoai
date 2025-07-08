@@ -1,9 +1,8 @@
 'use client'
 
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { BotMessageSquare } from 'lucide-react'
 import Image from 'next/image'
-import { useRef } from 'react'
 
 export const UseCases = ({ dict }) => {
   // Animation variants

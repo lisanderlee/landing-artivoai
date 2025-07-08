@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { useInView, motion } from 'motion/react'
+import { motion } from 'motion/react'
 import {
   Accordion,
   AccordionContent,
@@ -10,18 +10,12 @@ import {
 } from '@/components/ui/accordion'
 
 export const Faqs = ({ dict }) => {
-  const sectionRef = React.useRef(null)
-  const isInView = useInView(sectionRef)
-
   return (
-    <section
-      ref={sectionRef}
-      className="mx-auto my-10 grid max-w-[1730px] grid-cols-1 gap-30 rounded-[20px] px-10 pt-15 pb-50 pl-12 text-[#1D0D27] shadow-sm md:grid-cols-3 lg:mt-10 lg:mb-30"
-    >
+    <section className="mx-auto my-10 grid max-w-[1730px] grid-cols-1 gap-30 rounded-[20px] px-10 pt-15 pb-50 pl-12 text-[#1D0D27] shadow-sm md:grid-cols-3 lg:mt-10 lg:mb-30">
       <div className="col-span-1">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="w-max rounded-[40px] border border-[#7A57D2] px-10 py-1.5 font-medium text-[#09090B] shadow-[0px_4px_12.7px_0px_rgba(177,177,177,0.25)]"
         >
@@ -29,7 +23,7 @@ export const Faqs = ({ dict }) => {
         </motion.p>
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-6 max-w-4xl text-6xl font-medium text-[#09090B]"
         >
@@ -38,7 +32,7 @@ export const Faqs = ({ dict }) => {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-8 max-w-2xl text-xl font-normal text-[#09090B]"
         >
@@ -46,7 +40,7 @@ export const Faqs = ({ dict }) => {
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-2.5 max-w-2xl text-xl font-normal text-[#7F7F7F]"
         >
@@ -56,7 +50,7 @@ export const Faqs = ({ dict }) => {
       <motion.div
         className="col-span-2 pr-28"
         initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
         <Accordion type="single" collapsible className="w-full" defaultValue="item-1">

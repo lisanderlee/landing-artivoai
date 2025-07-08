@@ -1,20 +1,17 @@
 'use client'
 
 import { BotMessageSquare, Candy, ImagePlusIcon, WandSparkles } from 'lucide-react'
-import { useRef } from 'react'
-import { motion, useInView } from 'motion/react'
+import { motion } from 'motion/react'
 
 export const InputSection = ({ dict }) => {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { margin: '-100px' })
-
   return (
-    <section ref={sectionRef} className="grid -translate-y-20 grid-cols-7 items-end gap-4 lg:gap-2">
+    <section className="grid -translate-y-20 grid-cols-7 items-end gap-4 lg:gap-2">
       <div className="col-span-0 lg:col-span-1"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ margin: '-100px 0px -100px 0px', once: true }}
         transition={{ duration: 0.6 }}
         className="col-span-7 mx-auto w-full max-w-4xl gap-2 rounded-[20px] lg:col-span-5"
       >
