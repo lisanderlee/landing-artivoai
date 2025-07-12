@@ -68,73 +68,63 @@ export const RoadMap = ({ dict }) => {
               className="col-start-4 col-end-6 row-start-1 row-end-3 flex items-center justify-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.2 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <motion.svg
-                className="relative h-full w-full"
-                viewBox="0 0 71 31"
-                fill="none"
-                initial={{ scaleX: 0, transformOrigin: 'left center' }}
-                whileInView={{ scaleX: 1 }}
-                transition={{ duration: 0.2, delay: 0.2 }}
-              >
-                <path
-                  d="M2 13.5C0.89543 13.5 0 14.3954 0 15.5C0 16.6046 0.89543 17.5 2 17.5V13.5ZM69.9142 16.9142C70.6953 16.1332 70.6953 14.8668 69.9142 14.0858L57.1863 1.35786C56.4052 0.576816 55.1389 0.576816 54.3579 1.35786C53.5768 2.13891 53.5768 3.40524 54.3579 4.18629L65.6716 15.5L54.3579 26.8137C53.5768 27.5948 53.5768 28.8611 54.3579 29.6421C55.1389 30.4232 56.4052 30.4232 57.1863 29.6421L69.9142 16.9142ZM2 15.5V17.5H68.5V15.5V13.5H2V15.5Z"
-                  fill="white"
-                  className="opacity-10"
-                />
+              <svg className="relative h-full w-full" viewBox="0 0 71 31" fill="none">
+                <path d="M2 13.5C0.89543 13.5 0 14.3954 0 15.5C0 16.6046 0.89543 17.5 2 17.5V13.5ZM69.9142 16.9142C70.6953 16.1332 70.6953 14.8668 69.9142 14.0858L57.1863 1.35786C56.4052 0.576816 55.1389 0.576816 54.3579 1.35786C53.5768 2.13891 53.5768 3.40524 54.3579 4.18629L65.6716 15.5L54.3579 26.8137C53.5768 27.5948 53.5768 28.8611 54.3579 29.6421C55.1389 30.4232 56.4052 30.4232 57.1863 29.6421L69.9142 16.9142ZM2 15.5V17.5H68.5V15.5V13.5H2V15.5Z" />
                 <motion.path
                   d="M2 13.5C0.89543 13.5 0 14.3954 0 15.5C0 16.6046 0.89543 17.5 2 17.5V13.5ZM69.9142 16.9142C70.6953 16.1332 70.6953 14.8668 69.9142 14.0858L57.1863 1.35786C56.4052 0.576816 55.1389 0.576816 54.3579 1.35786C53.5768 2.13891 53.5768 3.40524 54.3579 4.18629L65.6716 15.5L54.3579 26.8137C53.5768 27.5948 53.5768 28.8611 54.3579 29.6421C55.1389 30.4232 56.4052 30.4232 57.1863 29.6421L69.9142 16.9142ZM2 15.5V17.5H68.5V15.5V13.5H2V15.5Z"
                   fill="url(#lineGradient)"
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  whileInView={{ pathLength: 1, opacity: [1, 1, 0, 0] }}
                   strokeDasharray={'0 1'}
                   transition={{
-                    duration: 0.2,
-                    delay: 0.8,
+                    duration: 0.6,
+                    delay: 0.2,
                     ease: 'easeInOut',
+                    times: [0, 0.1, 0.8, 1],
+                    repeat: Infinity,
+                    repeatDelay: 2,
                   }}
                 />
                 <defs>
                   <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <motion.stop
-                      offset="0%"
-                      stopColor="#0073E6"
-                      whileInView={{ offset: ['-100%', '100%'] }}
-                      transition={{
-                        duration: 0.8,
-                        repeat: Infinity,
-                        repeatType: 'loop',
-                        repeatDelay: 2,
-                        ease: 'linear',
-                      }}
-                    />
-                    <motion.stop
-                      offset="100%"
-                      stopColor="#0073E600"
-                      whileInView={{ offset: ['0%', '200%'] }}
-                      transition={{
-                        duration: 0.8,
-                        repeat: Infinity,
-                        repeatType: 'loop',
-                        ease: 'linear',
-                        repeatDelay: 2,
-                      }}
-                    />
+                    <stop offset="0%" stopColor="#0073E6" />
+                    <stop offset="100%" stopColor="#0073E600" />
                   </linearGradient>
                 </defs>
-              </motion.svg>
+              </svg>
             </motion.div>
           </div>
-          <div className="col-start-13 col-end-17 row-start-2 row-end-8">
+          <motion.div
+            className="col-start-13 col-end-17 row-start-2 row-end-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
             <svg viewBox="0 0 152 234" fill="none" className="h-full w-full">
-              <path
+              <motion.path
                 d="M2 0.5C0.89543 0.5 0 1.39543 0 2.5C0 3.60457 0.89543 4.5 2 4.5V0.5ZM150.914 219.914C151.695 219.133 151.695 217.867 150.914 217.086L138.186 204.358C137.405 203.577 136.139 203.577 135.358 204.358C134.577 205.139 134.577 206.405 135.358 207.186L146.672 218.5L135.358 229.814C134.577 230.595 134.577 231.861 135.358 232.642C136.139 233.423 137.405 233.423 138.186 232.642L150.914 219.914ZM2 2.5V4.5H52V2.5V0.5H2V2.5ZM76 26.5H74V194.5H76H78V26.5H76ZM100 218.5V220.5H149.5V218.5V216.5H100V218.5ZM76 194.5H74C74 208.859 85.6406 220.5 100 220.5V218.5V216.5C87.8497 216.5 78 206.65 78 194.5H76ZM52 2.5V4.5C64.1503 4.5 74 14.3497 74 26.5H76H78C78 12.1406 66.3594 0.5 52 0.5V2.5Z"
-                fill="white"
-                fillOpacity="0.61"
+                fill="url(#lineGradient)"
+                initial={{ pathLength: 0, opacity: 0 }}
+                whileInView={{
+                  pathLength: 1,
+                  opacity: [0, 1, 1, 0],
+                }}
+                strokeDasharray={'0 1'}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.6,
+                  ease: 'easeInOut',
+                  times: [0, 0.1, 0.9, 1],
+                  repeat: Infinity,
+                  repeatDelay: 2,
+                }}
               />
             </svg>
-          </div>
+          </motion.div>
+
+          {/* Second box to center Connector */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -147,6 +137,7 @@ export const RoadMap = ({ dict }) => {
               gridRowEnd: 6,
             }}
           />
+
           <div className="col-start-5 col-end-17 row-start-4 row-end-9">
             <svg
               viewBox="0 0 516 100"
@@ -161,35 +152,8 @@ export const RoadMap = ({ dict }) => {
               />
             </svg>
           </div>
-          <div className="col-start-8 col-end-17 row-start-9 row-end-7">
-            <svg
-              className="h-full w-full"
-              viewBox="0 0 364 113"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 109C0.89543 109 0 109.895 0 111C0 112.105 0.89543 113 2 113V109ZM362.914 16.9142C363.695 16.1332 363.695 14.8668 362.914 14.0858L350.186 1.35786C349.405 0.576816 348.139 0.576816 347.358 1.35786C346.577 2.13891 346.577 3.40524 347.358 4.18629L358.672 15.5L347.358 26.8137C346.577 27.5948 346.577 28.8611 347.358 29.6421C348.139 30.4232 349.405 30.4232 350.186 29.6421L362.914 16.9142ZM2 111V113H158V111V109H2V111ZM182 87H184V39.5H182H180V87H182ZM206 15.5V17.5H361.5V15.5V13.5H206V15.5ZM182 39.5H184C184 27.3497 193.85 17.5 206 17.5V15.5V13.5C191.641 13.5 180 25.1406 180 39.5H182ZM158 111V113C172.359 113 184 101.359 184 87H182H180C180 99.1503 170.15 109 158 109V111Z"
-                fill="white"
-                fillOpacity="0.61"
-              />
-            </svg>
-          </div>
 
-          <div className="col-start-13 col-end-17 row-start-11 row-end-7">
-            <svg
-              className="h-full w-full"
-              viewBox="0 0 180 282"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 278C0.89543 278 0 278.895 0 280C0 281.105 0.89543 282 2 282V278ZM178.914 16.9142C179.695 16.1332 179.695 14.8668 178.914 14.0858L166.186 1.35786C165.405 0.576816 164.139 0.576816 163.358 1.35786C162.577 2.13891 162.577 3.40524 163.358 4.18629L174.672 15.5L163.358 26.8137C162.577 27.5948 162.577 28.8611 163.358 29.6421C164.139 30.4232 165.405 30.4232 166.186 29.6421L178.914 16.9142ZM2 280V282H66V280V278H2V280ZM90 256H92V39.5H90H88V256H90ZM114 15.5V17.5H177.5V15.5V13.5H114V15.5ZM90 39.5H92C92 27.3497 101.85 17.5 114 17.5V15.5V13.5C99.6406 13.5 88 25.1406 88 39.5H90ZM66 280V282C80.3594 282 92 270.359 92 256H90H88C88 268.15 78.1503 278 66 278V280Z"
-                fill="white"
-                fillOpacity="0.61"
-              />
-            </svg>
-          </div>
+          {/* third box to center Connector */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -203,6 +167,22 @@ export const RoadMap = ({ dict }) => {
             }}
           />
 
+          <div className="col-start-9 col-end-17 row-start-9 row-end-7">
+            <svg
+              className="h-full"
+              viewBox="0 0 364 113"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 109C0.89543 109 0 109.895 0 111C0 112.105 0.89543 113 2 113V109ZM362.914 16.9142C363.695 16.1332 363.695 14.8668 362.914 14.0858L350.186 1.35786C349.405 0.576816 348.139 0.576816 347.358 1.35786C346.577 2.13891 346.577 3.40524 347.358 4.18629L358.672 15.5L347.358 26.8137C346.577 27.5948 346.577 28.8611 347.358 29.6421C348.139 30.4232 349.405 30.4232 350.186 29.6421L362.914 16.9142ZM2 111V113H158V111V109H2V111ZM182 87H184V39.5H182H180V87H182ZM206 15.5V17.5H361.5V15.5V13.5H206V15.5ZM182 39.5H184C184 27.3497 193.85 17.5 206 17.5V15.5V13.5C191.641 13.5 180 25.1406 180 39.5H182ZM158 111V113C172.359 113 184 101.359 184 87H182H180C180 99.1503 170.15 109 158 109V111Z"
+                fill="white"
+                fillOpacity="0.61"
+              />
+            </svg>
+          </div>
+
+          {/* last two boxes */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -227,6 +207,21 @@ export const RoadMap = ({ dict }) => {
               gridRowEnd: 12,
             }}
           />
+          {/* lastBox2 to center Connector */}
+          <div className="col-start-13 col-end-17 row-start-11 row-end-7">
+            <svg
+              className="h-full w-full"
+              viewBox="0 0 180 282"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 278C0.89543 278 0 278.895 0 280C0 281.105 0.89543 282 2 282V278ZM178.914 16.9142C179.695 16.1332 179.695 14.8668 178.914 14.0858L166.186 1.35786C165.405 0.576816 164.139 0.576816 163.358 1.35786C162.577 2.13891 162.577 3.40524 163.358 4.18629L174.672 15.5L163.358 26.8137C162.577 27.5948 162.577 28.8611 163.358 29.6421C164.139 30.4232 165.405 30.4232 166.186 29.6421L178.914 16.9142ZM2 280V282H66V280V278H2V280ZM90 256H92V39.5H90H88V256H90ZM114 15.5V17.5H177.5V15.5V13.5H114V15.5ZM90 39.5H92C92 27.3497 101.85 17.5 114 17.5V15.5V13.5C99.6406 13.5 88 25.1406 88 39.5H90ZM66 280V282C80.3594 282 92 270.359 92 256H90H88C88 268.15 78.1503 278 66 278V280Z"
+                fill="white"
+                fillOpacity="0.61"
+              />
+            </svg>
+          </div>
         </figure>
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-24 w-24">
