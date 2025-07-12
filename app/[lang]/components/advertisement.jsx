@@ -78,6 +78,7 @@ export const Advertisement = ({ dict }) => {
                 className="max-h-[674px] w-md"
                 initial={{ opacity: 0, x: 100, rotate: 5 }}
                 whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+                viewport={{ margin: '0px 0px -200px 0px' }}
                 transition={{
                   duration: 0.8,
                   type: 'spring',
@@ -97,6 +98,7 @@ export const Advertisement = ({ dict }) => {
                 className="mt-25 -mr-20 max-h-[674px] w-[420px]"
                 initial={{ opacity: 0, x: -100, rotate: -5 }}
                 whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+                viewport={{ margin: '0px 0px -200px 0px' }}
                 transition={{
                   duration: 0.8,
                   type: 'spring',
