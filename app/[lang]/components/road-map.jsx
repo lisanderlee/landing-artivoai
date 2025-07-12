@@ -84,7 +84,7 @@ export const RoadMap = ({ dict }) => {
                     ease: 'easeInOut',
                     times: [0, 0.1, 0.8, 1],
                     repeat: Infinity,
-                    repeatDelay: 2,
+                    repeatDelay: 8,
                   }}
                 />
                 <defs>
@@ -118,7 +118,7 @@ export const RoadMap = ({ dict }) => {
                   ease: 'easeInOut',
                   times: [0, 0.1, 0.9, 1],
                   repeat: Infinity,
-                  repeatDelay: 2,
+                  repeatDelay: 8,
                 }}
               />
             </svg>
